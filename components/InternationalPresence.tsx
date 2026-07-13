@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { countriesData } from "@/data/countries";
 import { Globe, MapPin } from "lucide-react";
+import Image from "next/image";
 
 export default function InternationalPresence() {
   return (
@@ -37,9 +38,14 @@ export default function InternationalPresence() {
             >
               <div>
                 <div className="flex items-center justify-between mb-6">
-                  <span className="text-4xl" role="img" aria-label={country.name}>
-                    {country.flag}
-                  </span>
+                  <div className="w-10 h-7 relative rounded overflow-hidden shadow-sm border border-border-light/80 shrink-0">
+                    <Image
+                      src={`/flags/${country.code.toLowerCase()}.svg`}
+                      alt={`${country.name} flag`}
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
                   <span className="text-[9px] font-extrabold uppercase tracking-wider font-mono px-2.5 py-1 bg-secondary-bg border border-border-light rounded-full text-text-muted">
                     {country.status}
                   </span>
