@@ -1,179 +1,166 @@
 "use client";
 
-import { useState, useEffect } from "react";
-import Image from "next/image";
-import { Phone, MessageSquare, Calendar, ShieldCheck, Star, Activity, Terminal, ExternalLink } from "lucide-react";
+import { Phone, Calendar, Shield, Home, Code2, Globe, Building2, Users, Headphones, ShieldCheck } from "lucide-react";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 export default function Hero() {
-  const [systemLogs, setSystemLogs] = useState<string[]>([
-    "INITIALIZING SECURITY MESH...",
-    "CAMERA FEED 01: ACTIVE [4K]",
-    "BIOMETRIC LINK: SECURED",
-    "FIREWALL STATE: PROTECTED",
-  ]);
+  const WhatsAppIcon = () => (
+    <svg className="w-4 h-4 text-emerald-500 fill-current shrink-0" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.73-1.45L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.825 1.451 5.436 0 9.86-4.42 9.864-9.864.002-2.637-1.03-5.114-2.903-6.989C16.262 1.877 13.79 .843 11.179.843c-5.437 0-9.865 4.42-9.869 9.866-.001 1.77.461 3.5 1.338 5.016L1.644 21.68l6.003-1.573z" />
+    </svg>
+  );
 
-  useEffect(() => {
-    const logs = [
-      "AI DETECT: SECURE FACIAL SCAN MATCHED",
-      "NETWORK AUDIT: NO THREATS FOUND",
-      "ACTIVE CHANNEL: IP DOME 02 ONLINE",
-      "REMOTE MONITORING PORT: ACTIVE",
-      "ENCRYPTION KEY: SYNCED [AES-256]",
-    ];
-    
-    const interval = setInterval(() => {
-      const randomLog = logs[Math.floor(Math.random() * logs.length)];
-      const timestamp = new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', second: '2-digit' });
-      setSystemLogs(prev => [...prev.slice(1), `[${timestamp}] ${randomLog}`]);
-    }, 4500);
+  const bentoItems = [
+    {
+      icon: Shield,
+      title: "Advanced Security",
+      desc: "CCTV, Access Control & Biometric Systems"
+    },
+    {
+      icon: Home,
+      title: "Smart Automation",
+      desc: "Smart Home & Building Automation"
+    },
+    {
+      icon: Code2,
+      title: "Enterprise Software",
+      desc: "Scalable & Custom Software Solutions"
+    },
+    {
+      icon: Globe,
+      title: "Global Reach",
+      desc: "Serving across India, GCC & Beyond"
+    }
+  ];
 
-    return () => clearInterval(interval);
-  }, []);
+
 
   return (
     <section
       id="home"
-      className="relative min-h-screen pt-40 pb-24 flex items-center bg-white overflow-hidden bg-grid-pattern"
+      className="relative min-h-screen pt-36 pb-12 flex flex-col justify-between overflow-hidden bg-white"
     >
-      {/* Decorative Gradients */}
-      <div className="absolute top-1/4 right-0 w-[600px] h-[600px] radial-glow-primary -z-10" />
-      <div className="absolute bottom-12 left-0 w-[400px] h-[400px] radial-glow-success -z-10" />
+      {/* Background Image Container with cover and custom right positions */}
+      <div className="absolute inset-0 z-0 w-full h-full select-none pointer-events-none">
+        <Image
+          src="/images/hero-bg.jpg"
+          alt="Security Solutions Background"
+          fill
+          priority
+          unoptimized
+          className="object-cover object-[80%_center] lg:object-right"
+        />
+      </div>
 
-      <div className="max-w-7xl mx-auto px-6 md:px-12 w-full grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-8 items-center relative">
-        {/* Left Content */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, ease: "easeOut" }}
-          className="lg:col-span-7 flex flex-col justify-center"
-        >
-          {/* Status Badge */}
-          <div className="inline-flex items-center gap-2 bg-text-dark/5 border border-text-dark/10 px-3 py-1 rounded-full text-[10px] font-extrabold uppercase tracking-widest text-text-dark w-fit mb-8 shadow-sm">
-            <span className="w-2 h-2 rounded-full bg-success-green animate-pulse" />
-            SENIXGLOBAL • OPERATING IN INDIA AS SIXTH SENSE TECHNOLOGIES
+      {/* Hero content wrapper */}
+      <div className="max-w-7xl mx-auto px-6 md:px-12 w-full flex-grow flex flex-col justify-between relative z-10">
+        
+        {/* Main Grid for content and camera overlay */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center w-full mt-4 lg:mt-8">
+          
+          {/* Left Text Content */}
+          <motion.div
+            initial={{ opacity: 0, y: 25 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
+            className="lg:col-span-7 flex flex-col justify-center"
+          >
+            {/* Status / Operating Capsule Badge */}
+            <div className="inline-flex items-center gap-2 bg-white/70 backdrop-blur-md border border-slate-200/50 px-4 py-2 rounded-full text-[10px] font-extrabold uppercase tracking-widest text-slate-700 w-fit mb-6 shadow-sm">
+              <span className="w-1.5 h-1.5 rounded-full bg-primary" />
+              SENIXGLOBAL • OPERATING IN INDIA AS SIXTH SENSE TECHNOLOGIES
+            </div>
+
+            {/* Headline */}
+            <h1 className="text-4xl sm:text-5xl lg:text-[54px] lg:leading-[1.1] font-black text-slate-900 tracking-tight mb-4">
+              Intelligent Solutions.<br />
+              <span className="text-primary">Secure</span> Future.
+            </h1>
+
+            {/* Headline Accent Line */}
+            <div className="w-12 h-1 bg-primary rounded-full mb-6" />
+
+            {/* Subheadline description */}
+            <p className="text-sm sm:text-base text-slate-500 font-semibold max-w-xl mb-8 leading-relaxed">
+              Delivering advanced security, smart automation, enterprise software, and IT infrastructure solutions across India, Saudi Arabia, Oman, and the UAE.
+            </p>
+
+            {/* Action Buttons Row */}
+            <div className="flex flex-wrap gap-4">
+              <a
+                href="tel:+919747168484"
+                className="flex items-center gap-2.5 px-6 py-3 rounded-full bg-primary hover:bg-primary-hover text-white text-xs font-bold transition-all shadow-md hover:scale-[1.02] hover:shadow-lg"
+              >
+                <Phone className="w-4 h-4 fill-current shrink-0" />
+                Call Now
+              </a>
+              <a
+                href="https://wa.me/919747168484?text=Hi%2C%20I%20would%20like%20to%20get%20a%20free%20quote%20for%20security%20system%20installation."
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2.5 px-6 py-3 rounded-full bg-white hover:bg-slate-50 text-slate-700 text-xs font-bold border border-slate-200/80 shadow-sm hover:scale-[1.02] transition-all"
+              >
+                <WhatsAppIcon />
+                WhatsApp
+              </a>
+              <a
+                href="#contact"
+                className="flex items-center gap-2.5 px-6 py-3 rounded-full bg-white hover:bg-slate-50 text-slate-700 text-xs font-bold border border-slate-200/80 shadow-sm hover:scale-[1.02] transition-all"
+              >
+                <Calendar className="w-4 h-4 text-primary shrink-0" />
+                Free Site Survey
+              </a>
+            </div>
+          </motion.div>
+
+          {/* Right Glowing Ring Overlay Column (Hidden on mobile) */}
+          <div className="lg:col-span-5 relative hidden lg:flex justify-center items-center h-[350px]">
+            {/* Glowing Ring positioned perfectly overlaying the camera body */}
+            <div className="absolute right-[-10%] xl:right-[2%] top-[5%] w-[420px] h-[420px] flex items-center justify-center pointer-events-none">
+              {/* Outer Animated Glow Ring */}
+              <div className="absolute w-[80%] h-[80%] rounded-full border-2 border-blue-500/25 shadow-[0_0_50px_rgba(59,130,246,0.25),inset_0_0_35px_rgba(59,130,246,0.2)] animate-pulse-glow" />
+              {/* Inner Animated Glow Ring */}
+              <div className="absolute w-[60%] h-[60%] rounded-full border border-blue-400/15 shadow-[0_0_25px_rgba(59,130,246,0.15)] animate-pulse-glow-slow" />
+            </div>
           </div>
 
-          <h1 className="text-4xl sm:text-5xl lg:text-7xl font-extrabold text-text-dark tracking-tighter leading-[1.05] mb-6">
-            Global Tech &amp; <br />
-            <span className="bg-gradient-to-r from-primary via-[#0c59a0] to-[#111827] bg-clip-text text-transparent">
-              Smart Infrastructure
-            </span>
-          </h1>
+        </div>
 
-          <p className="text-base sm:text-lg text-text-muted max-w-xl mb-10 leading-relaxed font-medium">
-            Providing Security Solutions, Smart Automation, Enterprise Software, IT Infrastructure, CCTV, and Networking across India, Saudi Arabia, Oman, and the United Arab Emirates.
-          </p>
-
-          {/* Action Buttons */}
-          <div className="flex flex-wrap gap-4 mb-12">
-            <a
-              href="tel:+919747168484"
-              className="flex items-center gap-2 px-6 py-3.5 rounded-2xl bg-text-dark hover:bg-primary text-white text-xs font-bold transition-all shadow-md hover:scale-[1.02] hover:shadow-lg"
-            >
-              <Phone className="w-4 h-4 fill-current" />
-              Call Now
-            </a>
-            <a
-              href="https://wa.me/919747168484?text=Hi%2C%20I%20would%20like%20to%20get%20a%20free%20quote%20for%20security%20system%20installation."
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-2 px-6 py-3.5 rounded-2xl bg-success-green hover:bg-success-green/90 text-white text-xs font-bold transition-all shadow-md hover:scale-[1.02] hover:shadow-lg"
-            >
-              <MessageSquare className="w-4 h-4 fill-current" />
-              WhatsApp
-            </a>
-            <a
-              href="#contact"
-              className="flex items-center gap-2 px-6 py-3.5 rounded-2xl bg-white hover:bg-secondary-bg text-text-dark text-xs font-bold border border-border-light shadow-sm hover:scale-[1.02] transition-all"
-            >
-              <Calendar className="w-4 h-4 text-primary" />
-              Free Site Survey
-            </a>
-          </div>
-
-          {/* Micro Trust Stats */}
-          <div className="flex flex-wrap items-center gap-8 border-t border-border-light/65 pt-8">
-            <div className="flex items-center gap-2">
-              <div className="flex text-amber-500">
-                {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="w-3.5 h-3.5 fill-current" />
-                ))}
-              </div>
-              <div className="text-xs">
-                <span className="font-extrabold text-text-dark block">5.0 Star Rating</span>
-                <span className="text-[10px] text-text-muted font-bold font-mono">97 GOOGLE REVIEWS</span>
-              </div>
-            </div>
-            <div className="h-6 w-px bg-border-light hidden sm:block" />
-            <div className="flex items-center gap-2.5">
-              <div className="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center text-primary">
-                <ShieldCheck className="w-4.5 h-4.5" />
-              </div>
-              <div className="text-xs">
-                <span className="font-extrabold text-text-dark block">Hikvision Partner</span>
-                <span className="text-[10px] text-text-muted font-bold">CERTIFIED INSTALLATION</span>
-              </div>
-            </div>
-          </div>
-        </motion.div>
-
-        {/* Right Dashboard Console Visual */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0.96 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.7, delay: 0.2 }}
-          className="lg:col-span-5 flex justify-center items-center relative w-full"
-        >
-          {/* Main Monitor Container */}
-          <div className="w-full max-w-[460px] bg-[#111827] rounded-3xl overflow-hidden shadow-2xl border border-white/10 flex flex-col">
-            
-            {/* Monitor Header */}
-            <div className="px-5 py-3 border-b border-white/5 bg-[#1f2937]/75 flex items-center justify-between">
-              <div className="flex items-center gap-2">
-                <span className="w-2.5 h-2.5 rounded-full bg-red-500/80" />
-                <span className="w-2.5 h-2.5 rounded-full bg-yellow-500/80" />
-                <span className="w-2.5 h-2.5 rounded-full bg-green-500/80" />
-              </div>
-              <div className="flex items-center gap-1.5 text-[10px] font-mono font-bold text-white/40 tracking-wider">
-                <Activity className="w-3 h-3 text-success-green animate-pulse-soft" />
-                LIVE_FEED://CAM_01
-              </div>
-              <div className="text-white/20">
-                <ExternalLink className="w-3 h-3" />
-              </div>
-            </div>
-
-            {/* Live Camera Feed Panel */}
-            <div className="relative aspect-video w-full bg-black overflow-hidden group">
-              <Image
-                src="/images/hero.webp"
-                alt="Active CCTV Surveillance Feed"
-                fill
-                priority
-                className="object-cover opacity-90 transition-transform duration-700 group-hover:scale-105"
-                sizes="(max-w-768px) 100vw, 460px"
-              />
-            </div>
-
-            {/* Diagnostic Console Panel */}
-            <div className="p-5 bg-black border-t border-white/5 flex flex-col gap-2.5 font-mono text-[9px]">
-              <div className="flex items-center gap-1.5 text-primary-hover font-bold">
-                <Terminal className="w-3 h-3" />
-                SYSTEM DIAGNOSTIC CONSOLE
-              </div>
-              <div className="space-y-1.5 text-white/50 max-h-[85px] overflow-hidden leading-relaxed">
-                {systemLogs.map((log, index) => (
-                  <div key={index} className="flex gap-2">
-                    <span className="text-success-green shrink-0">&gt;</span>
-                    <span className="truncate">{log}</span>
+        {/* Bottom content section: Bento Grid Panel & Stats */}
+        <div className="w-full flex flex-col gap-6 mt-12">
+          
+          {/* Floating Bento Panel */}
+          <motion.div
+            initial={{ opacity: 0, y: 15 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+            className="w-full bg-white/95 backdrop-blur-sm border border-slate-200/50 rounded-[32px] p-6 md:p-8 shadow-[0_10px_35px_rgba(0,0,0,0.02)] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 relative z-10"
+          >
+            {bentoItems.map((item, idx) => {
+              const Icon = item.icon;
+              return (
+                <div key={idx} className="flex items-center gap-4 group transition-all duration-300">
+                  <div className="w-12 h-12 rounded-2xl bg-blue-50/75 text-primary flex items-center justify-center shrink-0 transition-colors group-hover:bg-primary group-hover:text-white">
+                    <Icon className="w-5 h-5 shrink-0" />
                   </div>
-                ))}
-              </div>
-            </div>
+                  <div>
+                    <h3 className="text-sm font-bold text-slate-800 leading-tight mb-1">
+                      {item.title}
+                    </h3>
+                    <p className="text-xs text-slate-500 leading-snug">
+                      {item.desc}
+                    </p>
+                  </div>
+                </div>
+              );
+            })}
+          </motion.div>
 
-          </div>
-        </motion.div>
+
+
+        </div>
+
       </div>
     </section>
   );

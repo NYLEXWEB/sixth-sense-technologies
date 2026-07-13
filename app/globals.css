@@ -12,8 +12,26 @@
   --shadow-premium: 0 1px 2px rgba(0, 0, 0, 0.02), 0 8px 24px rgba(0, 0, 0, 0.02);
   --shadow-premium-hover: 0 1px 2px rgba(0, 0, 0, 0.02), 0 20px 40px rgba(0, 0, 0, 0.04);
 
-  --font-sans: var(--font-geist-sans), system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  --font-mono: var(--font-geist-mono), monospace;
+  --font-sans: var(--font-plus-jakarta), system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: monospace;
+  --font-display: var(--font-space-grotesk), system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+  --animate-pulse-glow: pulse-glow 3s infinite ease-in-out;
+  --animate-pulse-glow-slow: pulse-glow-slow 4.5s infinite ease-in-out;
+  --animate-marquee: marquee 45s linear infinite;
+
+  @keyframes pulse-glow {
+    0%, 100% { transform: scale(1); opacity: 0.55; }
+    50% { transform: scale(1.06); opacity: 0.85; }
+  }
+  @keyframes pulse-glow-slow {
+    0%, 100% { transform: scale(1); opacity: 0.4; }
+    50% { transform: scale(1.03); opacity: 0.7; }
+  }
+  @keyframes marquee {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
 }
 
 :root {
@@ -23,6 +41,7 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 90px;
 }
 
 body {
@@ -32,6 +51,13 @@ body {
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display) !important;
+  letter-spacing: -0.03em !important;
+  font-weight: 800 !important;
+  line-height: 1.15 !important;
 }
 
 /* Custom Scrollbar for premium feel */
@@ -46,45 +72,12 @@ body {
   border-radius: 3px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #9ca3af;
+  background: #0F6CBD;
 }
 
-/* Modern Background Grid Pattern */
+/* Modern Background Grid Pattern - Grid Lines Removed */
 .bg-grid-pattern {
-  background-size: 50px 50px;
-  background-image: 
-    linear-gradient(to right, rgba(229, 231, 235, 0.25) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(229, 231, 235, 0.25) 1px, transparent 1px);
-}
-
-/* Glassmorphism utility for floating header */
-.glass-nav {
-  background: rgba(255, 255, 255, 0.7);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(229, 231, 235, 0.6);
-}
-
-/* Bento Card Style */
-.bento-card {
-  background: #ffffff;
-  border: 1px solid rgba(229, 231, 235, 0.8);
-  border-radius: 24px;
-  box-shadow: var(--shadow-premium);
-  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-}
-.bento-card:hover {
-  border-color: rgba(15, 108, 189, 0.25);
-  box-shadow: var(--shadow-premium-hover);
-  transform: translateY(-2px);
-}
-
-/* Radial Glows */
-.radial-glow-primary {
-  background: radial-gradient(circle, rgba(15, 108, 189, 0.05) 0%, rgba(255, 255, 255, 0) 70%);
-}
-.radial-glow-success {
-  background: radial-gradient(circle, rgba(22, 163, 74, 0.035) 0%, rgba(255, 255, 255, 0) 70%);
+  background-image: none !important;
 }
 
 /* Micro-animations */
@@ -94,4 +87,166 @@ body {
 }
 .animate-pulse-soft {
   animation: pulse-soft 2.5s infinite ease-in-out;
+}
+
+
+/* ==========================================================================
+   UNIFIED MINIMAL & AESTHETIC WHITE THEME (LIGHT THEME)
+   Clean white and soft grey backgrounds with premium typography.
+   ========================================================================== */
+
+/* Base Styles */
+body, main, section, footer {
+  background-color: #ffffff !important;
+  color: #1f2937 !important;
+}
+
+/* Headings and Important Labels */
+h1, h2, h3, h4, h5, h6, 
+.text-text-dark, .text-slate-900, .text-slate-800, .text-slate-700 {
+  color: #111827 !important;
+}
+
+/* Descriptions, Body Text, and Labels */
+p, span, li, label,
+.text-text-muted, .text-slate-600, .text-slate-500, .text-slate-400 {
+  color: #4B5563 !important;
+}
+
+/* Custom Background Grays */
+.bg-\[\#f8f9fb\] {
+  background-color: #F8F9FB !important;
+}
+.bg-\[\#f8f9fb\]\/50 {
+  background-color: rgba(248, 249, 251, 0.5) !important;
+}
+.bg-\[\#f8f9fb\]\/75 {
+  background-color: rgba(248, 249, 251, 0.75) !important;
+}
+.bg-slate-50 {
+  background-color: #F8F9FB !important;
+}
+.bg-secondary-bg {
+  background-color: #F8F9FB !important;
+}
+.bg-secondary-bg\/50 {
+  background-color: rgba(248, 249, 251, 0.5) !important;
+}
+
+/* White background tags */
+.bg-white {
+  background-color: #ffffff !important;
+}
+
+/* Card wrappers and modals */
+.rounded-3xl.bg-white, .rounded-2xl.bg-white, 
+.bg-white.border, .bg-white.border-border-light {
+  background-color: #ffffff !important;
+  border-color: #E5E7EB !important;
+  box-shadow: var(--shadow-premium) !important;
+}
+
+/* Glass wrappers */
+.bg-white\/90 {
+  background-color: rgba(255, 255, 255, 0.9) !important;
+}
+.bg-white\/95 {
+  background-color: rgba(255, 255, 255, 0.95) !important;
+}
+.bg-white\/70 {
+  background-color: rgba(255, 255, 255, 0.75) !important;
+}
+.bg-white\/60 {
+  background-color: rgba(255, 255, 255, 0.6) !important;
+}
+
+/* Bento Card Style - Light Version */
+.bento-card {
+  background: #ffffff !important;
+  border: 1px solid #E5E7EB !important;
+  border-radius: 24px;
+  box-shadow: var(--shadow-premium) !important;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.bento-card:hover {
+  border-color: rgba(15, 108, 189, 0.2) !important;
+  box-shadow: var(--shadow-premium-hover) !important;
+  transform: translateY(-2px);
+}
+
+/* Bento card details inside services/software/products */
+#services .bento-card, #software .bento-card, #products .bento-card {
+  background-color: #ffffff !important;
+  border-color: #E5E7EB !important;
+  box-shadow: var(--shadow-premium) !important;
+}
+#services .bento-card h3, #software .bento-card h3, #products .bento-card h3 {
+  color: #111827 !important;
+}
+#services .bento-card p, #software .bento-card p, #products .bento-card p {
+  color: #4B5563 !important;
+}
+
+/* Borders */
+.border-border-light, .border-border-light\/55, 
+.border-border-light\/50, .border-border-light\/60,
+.border-slate-200, .border-slate-200\/50, .border-slate-200\/60 {
+  border-color: #E5E7EB !important;
+}
+
+/* Inputs and Forms */
+input, textarea, select {
+  background-color: #F8F9FB !important;
+  color: #111827 !important;
+  border-color: #E5E7EB !important;
+}
+input::placeholder, textarea::placeholder {
+  color: #9CA3AF !important;
+}
+
+/* CTA Container Override for White theme (soft clean card instead of dark slate) */
+#cta .bg-\[\#111827\], .bg-\[\#111827\] {
+  background-color: #F8F9FB !important;
+  border-color: #E5E7EB !important;
+}
+#cta h2, #cta p {
+  color: #111827 !important;
+}
+#cta .text-white\/60 {
+  color: #4B5563 !important;
+}
+#cta .bg-white\/10 {
+  background-color: rgba(15, 108, 189, 0.08) !important;
+  border-color: rgba(15, 108, 189, 0.15) !important;
+}
+#cta .text-white {
+  color: #0F6CBD !important;
+}
+
+/* Mobile Nav Drawer */
+.fixed.inset-x-4.top-\[84px\] {
+  background-color: #ffffff !important;
+  border-color: #E5E7EB !important;
+}
+
+/* WhatsApp Icon and Survey triggers formatting */
+.bg-success-green {
+  background-color: #16A34A !important;
+}
+.text-success-green {
+  color: #16A34A !important;
+}
+
+/* Custom CSS Selector Fixes for brackets in Tailwind compiled output */
+.bg-\[\#f8f9fb\] {
+  background-color: #F8F9FB !important;
+}
+.bg-\[\#f8f9fb\]\/50 {
+  background-color: rgba(248, 249, 251, 0.5) !important;
+}
+.bg-\[\#f8f9fb\]\/75 {
+  background-color: rgba(248, 249, 251, 0.75) !important;
+}
+.bg-\[\#111827\] {
+  background-color: #F8F9FB !important;
 }

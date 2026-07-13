@@ -72,6 +72,7 @@ export default function About() {
           <div className="flex gap-4">
             <button
               onClick={() => setIsModalOpen(true)}
+              suppressHydrationWarning
               className="inline-flex items-center gap-2 px-5 py-3 rounded-full bg-text-dark hover:bg-primary text-white text-xs font-bold transition-all shadow-sm hover:scale-[1.02]"
             >
               Read Our Full Story
@@ -92,8 +93,8 @@ export default function About() {
             <div className="absolute inset-0 bg-primary/5 rounded-3xl blur-2xl -z-10" />
             <div className="relative aspect-video rounded-2xl overflow-hidden border border-border-light/60">
               <Image
-                src="/images/about.webp"
-                alt="Active command control monitoring center feed"
+                src="/images/networking-model.png"
+                alt="Our certified network engineer model inspecting datacenter systems"
                 fill
                 className="object-cover"
                 sizes="(max-w-768px) 100vw, 460px"
@@ -102,7 +103,7 @@ export default function About() {
               {/* Overlay Glass Badge */}
               <div className="absolute bottom-4 left-4 bg-white/70 backdrop-blur-md px-3 py-1.5 rounded-xl border border-white/50 flex items-center gap-2 text-[10px] text-text-dark font-extrabold shadow-sm">
                 <span className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse" />
-                SURVEILLANCE CONTROL CENTER
+                CERTIFIED FIELD ENGINEERING
               </div>
             </div>
           </div>
@@ -138,6 +139,7 @@ export default function About() {
                 </div>
                 <button
                   onClick={() => setIsModalOpen(false)}
+                  suppressHydrationWarning
                   className="p-1.5 rounded-full hover:bg-secondary-bg text-text-muted transition-colors border border-border-light"
                 >
                   <X className="w-4 h-4" />
@@ -164,6 +166,7 @@ export default function About() {
                 </div>
                 <button
                   onClick={() => setIsModalOpen(false)}
+                  suppressHydrationWarning
                   className="px-5 py-2.5 bg-text-dark hover:bg-primary text-white text-xs font-bold rounded-full transition-all shadow-sm"
                 >
                   Close Document

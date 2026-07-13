@@ -40,6 +40,7 @@ export default function FAQ() {
               >
                 <button
                   onClick={() => toggleFAQ(idx)}
+                  suppressHydrationWarning
                   className="w-full flex items-center justify-between p-6 md:p-8 text-left hover:bg-secondary-bg/50 transition-colors"
                 >
                   <div className="flex items-center gap-4 pr-4">
