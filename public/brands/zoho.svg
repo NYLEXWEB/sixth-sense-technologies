@@ -1,8 +1,10 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 50" width="100%" height="100%">
     <rect width="180" height="50" rx="12" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5" />
     <g transform="translate(18, 12)">
-      <circle cx="13" cy="13" r="10" fill="#E31E24" opacity="0.1" />
-      <circle cx="13" cy="13" r="4.5" fill="#E31E24" />
-      <text x="32" y="18" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="800" fill="#111827" letter-spacing="0.5">ZOHO</text>
+      <rect x="0" y="4" width="8" height="8" fill="#E31E24" rx="1"/>
+      <circle cx="16" cy="8" r="4.5" fill="#0F6CBD"/>
+      <polygon points="6,19 11,11 16,19" fill="#16A34A"/>
+      <rect x="18" y="13" width="8" height="8" fill="#F59E0B" rx="4"/>
+      <text x="32" y="19" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="800" fill="#111827">ZOHO</text>
     </g>
   </svg>

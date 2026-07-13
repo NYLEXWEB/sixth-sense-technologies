@@ -10,8 +10,12 @@ export default function Partners() {
   const [activeCategory, setActiveCategory] = useState<string>(partnersData[0].category);
 
   const activePartners = partnersData.find(cat => cat.category === activeCategory)?.partners || [];
-  // Duplicate partners array to ensure continuous scrolling
-  const scrollPartners = [...activePartners, ...activePartners, ...activePartners];
+  
+  const row1 = activePartners.filter((_, idx) => idx % 2 === 0);
+  const row2 = activePartners.filter((_, idx) => idx % 2 !== 0);
+
+  const scrollRow1 = [...row1, ...row1, ...row1, ...row1];
+  const scrollRow2 = [...row2, ...row2, ...row2, ...row2];
 
   return (
     <section id="partners" className="py-24 bg-white relative overflow-hidden">
@@ -48,46 +52,94 @@ export default function Partners() {
         </div>
 
         {/* Logo Carousel Container */}
-        <div className="relative w-full overflow-hidden py-4 border-y border-border-light/65 bg-[#f8f9fb]/50 rounded-3xl">
-          {/* Fading Edges Overlays */}
-          <div className="absolute left-0 top-0 bottom-0 w-16 bg-gradient-to-r from-white via-white/50 to-transparent z-10 pointer-events-none" />
-          <div className="absolute right-0 top-0 bottom-0 w-16 bg-gradient-to-l from-white via-white/50 to-transparent z-10 pointer-events-none" />
+        <div className="space-y-4">
+          
+          {/* Row 1 (Left scrolling) */}
+          <div className="relative w-full overflow-hidden py-3.5 border-y border-border-light/65 bg-[#f8f9fb]/50 rounded-3xl">
+            {/* Fading Edges Overlays */}
+            <div className="absolute left-0 top-0 bottom-0 w-16 bg-gradient-to-r from-white via-white/50 to-transparent z-10 pointer-events-none" />
+            <div className="absolute right-0 top-0 bottom-0 w-16 bg-gradient-to-l from-white via-white/50 to-transparent z-10 pointer-events-none" />
 
-          <AnimatePresence mode="wait">
-            <motion.div
-              key={activeCategory}
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              transition={{ duration: 0.3 }}
-              className="flex w-max"
-            >
+            <AnimatePresence mode="wait">
               <motion.div
-                className="flex gap-6 items-center"
-                animate={{ x: ["0%", "-33.33%"] }}
-                transition={{
-                  ease: "linear",
-                  duration: 20,
-                  repeat: Infinity
-                }}
-                style={{ width: "max-content" }}
+                key={`${activeCategory}-row1`}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.3 }}
+                className="flex w-max"
               >
-                {scrollPartners.map((partner, index) => (
-                  <div
-                    key={`${partner.name}-${index}`}
-                    className="flex-shrink-0 w-[160px] h-[55px] relative rounded-xl bg-white border border-border-light/75 flex items-center justify-center p-3 shadow-sm hover:border-primary/20 transition-all"
-                  >
-                    <Image
-                      src={partner.logo}
-                      alt={`${partner.name} Authorized Logo`}
-                      fill
-                      className="object-contain p-2 filter grayscale opacity-75 hover:grayscale-0 hover:opacity-100 transition-all duration-300"
-                    />
-                  </div>
-                ))}
+                <motion.div
+                  className="flex gap-6 items-center"
+                  animate={{ x: ["0%", "-50%"] }}
+                  transition={{
+                    ease: "linear",
+                    duration: 25,
+                    repeat: Infinity
+                  }}
+                  style={{ width: "max-content" }}
+                >
+                  {scrollRow1.map((partner, index) => (
+                    <div
+                      key={`${partner.name}-${index}`}
+                      className="flex-shrink-0 w-[160px] h-[55px] relative rounded-xl bg-white border border-border-light/75 flex items-center justify-center p-3 shadow-sm hover:scale-[1.03] transition-all duration-300"
+                    >
+                      <Image
+                        src={partner.logo}
+                        alt={`${partner.name} Authorized Logo`}
+                        fill
+                        className="object-contain p-2 transition-all duration-300"
+                      />
+                    </div>
+                  ))}
+                </motion.div>
               </motion.div>
-            </motion.div>
-          </AnimatePresence>
+            </AnimatePresence>
+          </div>
+
+          {/* Row 2 (Right scrolling) */}
+          <div className="relative w-full overflow-hidden py-3.5 border-y border-border-light/65 bg-[#f8f9fb]/50 rounded-3xl">
+            {/* Fading Edges Overlays */}
+            <div className="absolute left-0 top-0 bottom-0 w-16 bg-gradient-to-r from-white via-white/50 to-transparent z-10 pointer-events-none" />
+            <div className="absolute right-0 top-0 bottom-0 w-16 bg-gradient-to-l from-white via-white/50 to-transparent z-10 pointer-events-none" />
+
+            <AnimatePresence mode="wait">
+              <motion.div
+                key={`${activeCategory}-row2`}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.3 }}
+                className="flex w-max"
+              >
+                <motion.div
+                  className="flex gap-6 items-center"
+                  animate={{ x: ["-50%", "0%"] }}
+                  transition={{
+                    ease: "linear",
+                    duration: 25,
+                    repeat: Infinity
+                  }}
+                  style={{ width: "max-content" }}
+                >
+                  {scrollRow2.map((partner, index) => (
+                    <div
+                      key={`${partner.name}-${index}`}
+                      className="flex-shrink-0 w-[160px] h-[55px] relative rounded-xl bg-white border border-border-light/75 flex items-center justify-center p-3 shadow-sm hover:scale-[1.03] transition-all duration-300"
+                    >
+                      <Image
+                        src={partner.logo}
+                        alt={`${partner.name} Authorized Logo`}
+                        fill
+                        className="object-contain p-2 transition-all duration-300"
+                      />
+                    </div>
+                  ))}
+                </motion.div>
+              </motion.div>
+            </AnimatePresence>
+          </div>
+
         </div>
 
         {/* Verification Note */}
