@@ -51,18 +51,18 @@ export default function Hero() {
           {/* Status Badge */}
           <div className="inline-flex items-center gap-2 bg-text-dark/5 border border-text-dark/10 px-3 py-1 rounded-full text-[10px] font-extrabold uppercase tracking-widest text-text-dark w-fit mb-8 shadow-sm">
             <span className="w-2 h-2 rounded-full bg-success-green animate-pulse" />
-            SYSTEM STATUS: SECURED & ACTIVE
+            SENIXGLOBAL • OPERATING IN INDIA AS SIXTH SENSE TECHNOLOGIES
           </div>
 
           <h1 className="text-4xl sm:text-5xl lg:text-7xl font-extrabold text-text-dark tracking-tighter leading-[1.05] mb-6">
-            Smart Security <br />
+            Global Tech &amp; <br />
             <span className="bg-gradient-to-r from-primary via-[#0c59a0] to-[#111827] bg-clip-text text-transparent">
-              For Modern Spaces
+              Smart Infrastructure
             </span>
           </h1>
 
           <p className="text-base sm:text-lg text-text-muted max-w-xl mb-10 leading-relaxed font-medium">
-            Professional CCTV integrations, enterprise-grade structured networking, biometric access gates, and proactive IT engineering for premier homes and businesses.
+            Providing Security Solutions, Smart Automation, Enterprise Software, IT Infrastructure, CCTV, and Networking across India, Saudi Arabia, Oman, and the United Arab Emirates.
           </p>
 
           {/* Action Buttons */}

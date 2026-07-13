@@ -24,11 +24,36 @@ export default function About() {
             Corporate Profile
           </div>
           <h2 className="text-3xl sm:text-5xl font-extrabold text-text-dark tracking-tighter leading-tight">
-            Protecting What Matters Most Since 2018
+            Global Engineering, Local Precision
           </h2>
           <p className="text-text-muted text-xs sm:text-sm leading-relaxed max-w-xl font-medium">
-            Based in Pulimoodu, Thiruvananthapuram, Sixth Sense Technologies provides custom security integrations and IT support solutions. From setting up residential smart WiFi camera loops to wiring high-throughput server networks, we configure systems with precision.
+            Senixglobal is an international technology company providing digital infrastructure and custom solutions. In India, we operate as Sixth Sense Technologies in Thiruvananthapuram, serving residential, commercial, and government partners with certified integrations.
           </p>
+
+          {/* Visual Timeline */}
+          <div className="space-y-5 my-8 border-l border-border-light/80 pl-6 relative">
+            <div className="relative">
+              <div className="absolute -left-[31px] top-1 w-4 h-4 rounded-full bg-primary border-4 border-white shadow-sm" />
+              <h4 className="text-xs font-extrabold text-text-dark uppercase tracking-wider font-mono">Global Brand</h4>
+              <p className="text-[11px] text-text-muted mt-0.5 leading-relaxed font-medium">
+                Senixglobal is established as an international technology provider, specializing in enterprise systems and IT architectures.
+              </p>
+            </div>
+            <div className="relative">
+              <div className="absolute -left-[31px] top-1 w-4 h-4 rounded-full bg-primary border-4 border-white shadow-sm" />
+              <h4 className="text-xs font-extrabold text-text-dark uppercase tracking-wider font-mono">India Operations</h4>
+              <p className="text-[11px] text-text-muted mt-0.5 leading-relaxed font-medium">
+                Operating in India as Sixth Sense Technologies, leading security loops, CCTV, smart automation, and local IT networking integrations in Thiruvananthapuram.
+              </p>
+            </div>
+            <div className="relative">
+              <div className="absolute -left-[31px] top-1 w-4 h-4 rounded-full bg-success-green border-4 border-white shadow-sm animate-pulse" />
+              <h4 className="text-xs font-extrabold text-text-dark uppercase tracking-wider font-mono">Middle East Expansion</h4>
+              <p className="text-[11px] text-text-muted mt-0.5 leading-relaxed font-medium">
+                Expanding services across Saudi Arabia, Oman, and the United Arab Emirates, building robust security loops, automated gates, and custom enterprise software.
+              </p>
+            </div>
+          </div>
 
           {/* Stats Bar */}
           <div className="grid grid-cols-3 gap-6 border-y border-border-light/75 py-8 my-8">
@@ -122,20 +147,20 @@ export default function About() {
               {/* Story Content */}
               <div className="space-y-4 text-xs sm:text-sm text-text-muted leading-relaxed font-medium">
                 <p>
-                  Sixth Sense Technologies was founded with a clear objective: to bring high-end engineering standards to security systems and local IT setups in Thiruvananthapuram. We recognized that most clients faced unreliable wiring, lack of warranty backups, and delayed support.
+                  Senixglobal was founded as an international technology company built to serve enterprise clients with unified security and IT architectures. In India, we operate as Sixth Sense Technologies, delivering high-end engineering standards directly to residences, corporations, and builders in Thiruvananthapuram, Kerala.
                 </p>
                 <p>
-                  By partnering directly with official brands like Hikvision, we established a pipeline of genuine product supplies and technical updates. We train our engineers to handle complex network topologies, firewall routing, and optical cabling layouts.
+                  By partnering directly with official global giants, we established a pipeline of genuine equipment supplies, secure firmware upgrades, and valid warranty cycles. We train our engineers in advanced optical networking, system firewalls, and server-side software deployments.
                 </p>
                 <p>
-                  Today, we support over 500 residences, corporate offices, builders, and educational institutions in Thiruvananthapuram. Whether installing simple smart cameras or wiring enterprise network racks, our commitment to neat layouts and reliable support remains unchanged.
+                  With our expansion into the Middle East—specifically Saudi Arabia, Oman, and the United Arab Emirates—we have brought our certified security solutions, building management software, and custom business automation platforms to a global audience.
                 </p>
               </div>
 
               <div className="border-t border-border-light/65 pt-6 flex flex-wrap gap-4 items-center justify-between">
                 <div className="flex items-center gap-2 text-xs text-text-dark font-extrabold">
                   <MapPin className="w-4 h-4 text-primary" />
-                  Pulimoodu Junction, Trivandrum
+                  India: Trivandrum | Middle East: Riyadh, Muscat, Dubai
                 </div>
                 <button
                   onClick={() => setIsModalOpen(false)}

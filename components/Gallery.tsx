@@ -38,6 +38,27 @@ export default function Gallery() {
       techUsed: "24-Port Gigabit PoE Switch, CAT6 Patch Panel, Server Tower",
       panoramic: true,
     },
+    {
+      src: "/images/gallery-5.png",
+      title: "Smart Home Automation Panel",
+      category: "Home Automation",
+      location: "Luxury Estate, Dubai UAE",
+      techUsed: "Premium wall mounted smart controller, lighting & temperature loop integration",
+    },
+    {
+      src: "/images/gallery-6.png",
+      title: "Driveway Gate Automation",
+      category: "Gate Automation",
+      location: "Private Mansion, Muscat Oman",
+      techUsed: "Heavy duty swing gate motor arm with secure RFID remote trigger",
+    },
+    {
+      src: "/images/gallery-7.png",
+      title: "Enterprise Fiber Optic Loop",
+      category: "IT Infrastructure",
+      location: "Industrial Center, Riyadh KSA",
+      techUsed: "CAT6 shielded cabling, high-density fiber splice box, OTDR testing verified",
+    },
   ];
 
   const handlePrev = () => {

@@ -1,6 +1,6 @@
 "use client";
 
-import { Award, Star, ShieldCheck, CheckCircle2 } from "lucide-react";
+import { Award, Star, ShieldCheck, CheckCircle2, Globe, Users } from "lucide-react";
 import { motion } from "framer-motion";
 
 export default function TrustSection() {
@@ -11,14 +11,24 @@ export default function TrustSection() {
       subtitle: "OFFICIAL HIKVISION SUPPLY",
     },
     {
+      icon: Globe,
+      title: "International Partner",
+      subtitle: "INDIA & MIDDLE EAST",
+    },
+    {
+      icon: Users,
+      title: "Professional Engineers",
+      subtitle: "CERTIFIED FIELD DIAGNOSTICS",
+    },
+    {
       icon: ShieldCheck,
-      title: "2-Year Warranty",
-      subtitle: "ON ALL PRIMARY CAMERA LINES",
+      title: "Trusted Brands",
+      subtitle: "GENUINE HARDWARE ONLY",
     },
     {
       icon: CheckCircle2,
-      title: "100% Genuine",
-      subtitle: "ORIGINAL FIRMWARE BACKUP",
+      title: "Enterprise Ready",
+      subtitle: "SCALABLE SYSTEMS STACK",
     },
   ];
 
@@ -28,7 +38,7 @@ export default function TrustSection() {
         <div className="w-full bg-[#f8f9fb] border border-border-light rounded-3xl p-6 md:p-8 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
           
           {/* Left Rating Block */}
-          <div className="lg:col-span-4 flex flex-col sm:flex-row lg:flex-col xl:flex-row items-center sm:items-start lg:items-center xl:items-start gap-4 text-center sm:text-left lg:text-center xl:text-left">
+          <div className="lg:col-span-3 flex flex-col sm:flex-row lg:flex-col xl:flex-row items-center sm:items-start lg:items-center xl:items-start gap-4 text-center sm:text-left lg:text-center xl:text-left">
             <div className="flex flex-col items-center justify-center bg-white border border-border-light w-16 h-16 rounded-2xl shadow-sm shrink-0">
               <span className="text-xl font-black text-text-dark leading-none">5.0</span>
               <div className="flex text-amber-500 gap-0.5 mt-1">
@@ -39,10 +49,10 @@ export default function TrustSection() {
             </div>
             <div>
               <h3 className="text-xs font-bold text-text-dark tracking-tight mb-1">
-                Top Rated CCTV Installer
+                Top Rated Integrator
               </h3>
               <p className="text-[11px] text-text-muted leading-relaxed max-w-[220px]">
-                Verified by 97+ Thiruvananthapuram residential and commercial customer reviews on Google.
+                Verified by 97+ residential and commercial customer reviews on Google.
               </p>
             </div>
           </div>
@@ -51,7 +61,7 @@ export default function TrustSection() {
           <div className="hidden lg:block lg:col-span-1 justify-self-center h-10 w-px bg-border-light" />
 
           {/* Right badges */}
-          <div className="lg:col-span-7 grid grid-cols-1 sm:grid-cols-3 gap-6">
+          <div className="lg:col-span-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-5 gap-6">
             {trustBadges.map((badge, idx) => {
               const Icon = badge.icon;
               return (

@@ -1,33 +1,52 @@
 "use client";
 
-import { ShieldCheck, Headphones, Award, Settings } from "lucide-react";
+import {
+  Globe,
+  Wrench,
+  Building2,
+  GraduationCap,
+  Award,
+  Headphones,
+  Zap
+} from "lucide-react";
 import { motion } from "framer-motion";
 
 export default function WhyChooseUs() {
   const advantages = [
     {
-      num: "01",
+      icon: Globe,
+      title: "International Experience",
+      description: "Deploying enterprise networks and systems across India and key Middle East regions, adhering to international compliance standards.",
+    },
+    {
+      icon: Wrench,
+      title: "Professional Installation",
+      description: "We use heavy-duty shielded cabling, labeled patch arrays, and clean conduits to ensure clean aesthetics and zero signal drop.",
+    },
+    {
+      icon: Building2,
+      title: "Enterprise Grade Solutions",
+      description: "We design robust systems tailored for scale, serving builders, corporate campuses, residences, and warehouses.",
+    },
+    {
+      icon: GraduationCap,
+      title: "Certified Engineers",
+      description: "Our staff holds official technical credentials directly from global brands like Hikvision, ensuring top-tier diagnostics.",
+    },
+    {
       icon: Award,
-      title: "Certified System Engineers",
-      description: "Our technicians hold official partner credentials directly from Hikvision. We ensure proper camera angles, structural integrity, and clean cable paths.",
+      title: "Premium Brands",
+      description: "We deploy genuine products from Zoho, Odoo, Oracle, Hikvision, Dahua, and Honeywell to ensure valid warranties and secure firmware.",
     },
     {
-      num: "02",
-      icon: ShieldCheck,
-      title: "2-Year Hardware Warranty",
-      description: "Every CCTV surveillance camera, digital recorder (DVR/NVR), and biometric controller is backed by an authentic brand warranty and replacement support.",
-    },
-    {
-      num: "03",
       icon: Headphones,
-      title: "24/7 Critical Helpdesk",
-      description: "Get continuous phone and remote-desktop diagnostics support. We immediately address recording glitches, network drops, or password locks.",
+      title: "After Sales Support",
+      description: "Get dedicated 24/7 helpline access, remote desk configurations, and priority on-site assistance through AMCs.",
     },
     {
-      num: "04",
-      icon: Settings,
-      title: "Clean Structured Cabling",
-      description: "We prevent data packet loss and security vulnerabilities by using heavy-duty shielded CAT6 cables, labeled patch panels, and dust-resistant enclosures.",
+      icon: Zap,
+      title: "Future Ready Technology",
+      description: "Integrating smart gates, biometric sensors, and AI-enabled video security systems into unified digital controls.",
     },
   ];
 
@@ -37,7 +56,7 @@ export default function WhyChooseUs() {
         
         {/* Left Sticky Column */}
         <div className="lg:col-span-5 lg:sticky lg:top-28">
-          <div className="inline-flex items-center gap-2 bg-primary/10 border border-primary/20 px-3 py-1 rounded-full text-[10px] font-extrabold uppercase tracking-widest text-primary mb-4">
+          <div className="inline-flex items-center gap-2 bg-primary/10 border border-primary/20 px-3 py-1 rounded-full text-[10px] font-extrabold uppercase tracking-widest text-primary mb-4 font-mono">
             Corporate Advantages
           </div>
           <h2 className="text-3xl sm:text-5xl font-extrabold text-text-dark tracking-tighter leading-tight mb-6">
@@ -50,8 +69,8 @@ export default function WhyChooseUs() {
           {/* Metric Dashboard block */}
           <div className="grid grid-cols-3 gap-4 border-t border-border-light/75 pt-8">
             <div>
-              <span className="text-2xl sm:text-3xl font-black text-text-dark tracking-tight block">97+</span>
-              <span className="text-[10px] font-bold text-text-muted uppercase tracking-wider font-mono">CLIENTS</span>
+              <span className="text-2xl sm:text-3xl font-black text-text-dark tracking-tight block">500+</span>
+              <span className="text-[10px] font-bold text-text-muted uppercase tracking-wider font-mono">PROJECTS</span>
             </div>
             <div>
               <span className="text-2xl sm:text-3xl font-black text-text-dark tracking-tight block">24/7</span>

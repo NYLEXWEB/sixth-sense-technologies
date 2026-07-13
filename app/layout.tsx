@@ -13,45 +13,46 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Sixth Sense Technologies | Premium CCTV & IT Security Solutions Thiruvananthapuram",
-  description: "Certified Hikvision partners in Thiruvananthapuram, Kerala. We install professional CCTV systems, smart WiFi cameras, biometric access control, video door phones, and configure enterprise networking.",
+  title: "Senixglobal | Global Tech, Security Systems & Smart Infrastructure",
+  description: "International technology solutions provider. Operating in India as Sixth Sense Technologies. Offering professional CCTV integrations, smart gate automation, biometric access systems, custom ERP/CRM software, and enterprise network setups across India, Saudi Arabia, Oman, and UAE.",
   keywords: [
-    "CCTV Installation Thiruvananthapuram",
+    "Senixglobal",
+    "Sixth Sense Technologies Thiruvananthapuram",
+    "CCTV Installation Trivandrum",
     "Security System Supplier Kerala",
-    "Hikvision Certified Company Thiruvananthapuram",
-    "Biometric Access Control Pulimoodu",
-    "Video Door Phone Installation Trivandrum",
-    "Structured Networking IT Support Kerala",
-    "Computer Laptop Repair Thiruvananthapuram"
+    "Gate Automation Oman Saudi Arabia",
+    "Enterprise Software Solutions GCC",
+    "Biometric Access Control Trivandrum",
+    "Structured Networking Support Kerala"
   ],
-  authors: [{ name: "Sixth Sense Technologies" }],
-  creator: "Sixth Sense Technologies",
-  publisher: "Sixth Sense Technologies",
+  authors: [{ name: "Senixglobal" }],
+  creator: "Senixglobal",
+  publisher: "Senixglobal",
   formatDetection: {
     email: false,
     address: true,
     telephone: true,
   },
   openGraph: {
-    title: "Sixth Sense Technologies | Premium CCTV & IT Security Solutions",
-    description: "Certified Hikvision partners in Thiruvananthapuram. Professional CCTV installation, smart WiFi cameras, structured networking, biometric access control, and IT support services.",
+    title: "Senixglobal | Global Tech & Security Integrations",
+    description: "Operating in India as Sixth Sense Technologies. Custom CCTV installations, smart gate automation, biometric systems, and enterprise software solutions.",
     url: "https://sixthsensetech.in",
-    siteName: "Sixth Sense Technologies",
-    locale: "en_IN",
+    siteName: "Senixglobal",
+    locale: "en_US",
     type: "website",
     images: [
       {
         url: "/images/hero.webp",
         width: 1200,
         height: 630,
-        alt: "Sixth Sense Technologies smart surveillance solutions",
+        alt: "Senixglobal smart technology and security systems",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Sixth Sense Technologies | CCTV & Security Integrations",
-    description: "Professional security camera setups, structured networks, and IT repairs in Thiruvananthapuram.",
+    title: "Senixglobal | Global Tech & Security Systems",
+    description: "International installations of security solutions, smart automation, enterprise software, and IT infrastructures.",
     images: ["/images/hero.webp"],
   },
 };

@@ -72,10 +72,22 @@ export default function Contact() {
                   <MapPin className="w-4.5 h-4.5" />
                 </div>
                 <div>
-                  <h4 className="text-xs font-extrabold text-text-dark uppercase tracking-wider mb-1 font-mono">Location coordinates</h4>
+                  <h4 className="text-xs font-extrabold text-text-dark uppercase tracking-wider mb-1 font-mono">India Office (Operating Division)</h4>
                   <p className="text-xs text-text-muted leading-relaxed font-medium">
                     Sixth Sense Technologies, Pulimoodu Jn,<br />
                     Thiruvananthapuram, Kerala - 695001
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex items-start gap-4 border-t border-border-light/60 pt-4">
+                <div className="w-10 h-10 rounded-xl bg-white border border-border-light flex items-center justify-center text-primary shrink-0 shadow-sm">
+                  <MapPin className="w-4.5 h-4.5" />
+                </div>
+                <div>
+                  <h4 className="text-xs font-extrabold text-text-dark uppercase tracking-wider mb-1 font-mono">International Branches</h4>
+                  <p className="text-xs text-text-muted leading-relaxed font-medium">
+                    Riyadh (Saudi Arabia) • Muscat (Oman) • Dubai (United Arab Emirates)
                   </p>
                 </div>
               </div>

@@ -45,11 +45,11 @@ export default function Navbar() {
               <Eye className="w-4.5 h-4.5 text-white" />
             </div>
             <div>
-              <span className="text-sm font-bold tracking-tight text-text-dark block leading-none">
-                SIXTH SENSE
+              <span className="text-sm font-bold tracking-tight text-text-dark block leading-none uppercase">
+                SENIXGLOBAL
               </span>
-              <span className="text-[8px] font-extrabold tracking-widest text-primary block mt-0.5 font-mono">
-                TECHNOLOGIES
+              <span className="text-[7px] font-extrabold tracking-widest text-primary block mt-0.5 font-mono uppercase">
+                GLOBAL TECHNOLOGY
               </span>
             </div>
           </a>
