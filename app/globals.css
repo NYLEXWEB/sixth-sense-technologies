@@ -250,3 +250,27 @@ input::placeholder, textarea::placeholder {
 .bg-\[\#111827\] {
   background-color: #F8F9FB !important;
 }
+
+/* Software Solutions Dark Section Overrides */
+#software {
+  background-color: #05070A !important;
+}
+
+#software h2, #software h3, #software .text-white, #software .text-slate-200 {
+  color: #ffffff !important;
+}
+
+#software p, #software .text-slate-400, #software span {
+  color: #9CA3AF !important;
+}
+
+#software .bg-\[\#0C0F17\], #software .bg-white {
+  background-color: #0C0F17 !important;
+  border-color: rgba(255, 255, 255, 0.05) !important;
+}
+
+#software .bg-primary\/10 {
+  background-color: rgba(15, 108, 189, 0.15) !important;
+  border-color: rgba(15, 108, 189, 0.2) !important;
+}
+
