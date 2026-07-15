@@ -7,6 +7,9 @@ export default function robots(): MetadataRoute.Robots {
       allow: "/",
       disallow: "/api/",
     },
-    sitemap: "https://sensixglobal.com/sitemap.xml",
+    sitemap: [
+      "https://sensixglobal.com/sitemap.xml",
+      "https://sensixglobal.com/image-sitemap.xml"
+    ],
   };
 }

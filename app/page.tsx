@@ -52,7 +52,11 @@ export default function Home() {
         "@type": ["SecuritySystemProvider", "LocalBusiness"],
         "@id": "https://sensixglobal.com/#localbusiness",
         "name": "Sixth Sense Technologies",
-        "image": "https://sensixglobal.com/images/hero.webp",
+        "image": [
+          "https://sensixglobal.com/images/hero.webp",
+          "https://sensixglobal.com/images/networking-model.png",
+          "https://sensixglobal.com/images/security-model.png"
+        ],
         "url": "https://sensixglobal.com",
         "telephone": "+919747168484",
         "priceRange": "$$",
