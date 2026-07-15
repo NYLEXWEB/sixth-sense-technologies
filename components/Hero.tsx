@@ -44,7 +44,7 @@ export default function Hero() {
       {/* Background Image Container with cover and custom right positions */}
       <div className="absolute inset-0 z-0 w-full h-full select-none pointer-events-none">
         <Image
-          src="/images/hero-bg.jpg"
+          src="/images/cctv-camera-installation-trivandrum-hero-background.jpg"
           alt="Security Solutions Background"
           fill
           priority

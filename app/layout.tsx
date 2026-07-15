@@ -75,7 +75,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/images/hero.webp",
+        url: "/images/cctv-camera-dealer-kerala-hero-showcase.webp",
         width: 1200,
         height: 630,
         alt: "Sixth Sense Technologies CCTV installation and security solutions in Thiruvananthapuram",
@@ -86,7 +86,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Best CCTV Dealer in Thiruvananthapuram | Security Systems Kerala",
     description: "Certified security camera installation, biometric access controls, intruder fire alarms, and network cabling across Kerala.",
-    images: ["/images/hero.webp"],
+    images: ["/images/cctv-camera-dealer-kerala-hero-showcase.webp"],
   },
 };
 

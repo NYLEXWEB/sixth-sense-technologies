@@ -93,7 +93,7 @@ export default function About() {
             <div className="absolute inset-0 bg-primary/5 rounded-3xl blur-2xl -z-10" />
             <div className="relative aspect-video rounded-2xl overflow-hidden border border-border-light/60">
               <Image
-                src="/images/networking-model.png"
+                src="/images/enterprise-servers-cabling-network-infrastructure-rack.png"
                 alt="Our certified network engineer model inspecting datacenter systems"
                 fill
                 className="object-cover"

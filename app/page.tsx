@@ -53,9 +53,9 @@ export default function Home() {
         "@id": "https://sensixglobal.com/#localbusiness",
         "name": "Sixth Sense Technologies",
         "image": [
-          "https://sensixglobal.com/images/hero.webp",
-          "https://sensixglobal.com/images/networking-model.png",
-          "https://sensixglobal.com/images/security-model.png"
+          "https://sensixglobal.com/images/cctv-camera-dealer-kerala-hero-showcase.webp",
+          "https://sensixglobal.com/images/enterprise-servers-cabling-network-infrastructure-rack.png",
+          "https://sensixglobal.com/images/best-cctv-dealer-thiruvananthapuram-security-catalog.png"
         ],
         "url": "https://sensixglobal.com",
         "telephone": "+919747168484",

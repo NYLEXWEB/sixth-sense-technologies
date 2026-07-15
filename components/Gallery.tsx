@@ -10,28 +10,28 @@ export default function Gallery() {
 
   const photos = [
     {
-      src: "/images/gallery-1.webp",
+      src: "/images/biometric-entrance-gateway-access-control-trivandrum.webp",
       title: "Biometric Entrance Gateway",
       category: "Access Control",
       location: "Technopark, Trivandrum",
       techUsed: "Hikvision DS-K1T341AM Face Terminal, Magnetic Lock",
     },
     {
-      src: "/images/gallery-2.webp",
+      src: "/images/driveway-surveillance-bullet-security-camera-kowdiar.webp",
       title: "Driveway Surveillance Bullet",
       category: "CCTV Installation",
       location: "Private Residence, Kowdiar",
       techUsed: "Hikvision 4MP IP Varifocal Bullet Camera, CAT6 Shielded",
     },
     {
-      src: "/images/gallery-3.webp",
+      src: "/images/smart-intercom-villa-gate-video-door-phone-sasthamangalam.webp",
       title: "Smart Intercom Villa Gate",
       category: "Video Door Phone",
       location: "Independent Villa, Sasthamangalam",
       techUsed: "Hikvision DS-KIS602 IP Video Intercom Suite, App sync",
     },
     {
-      src: "/images/gallery-4.webp",
+      src: "/images/enterprise-structured-server-rack-networking-pulimoodu.webp",
       title: "Enterprise Structured Server Rack",
       category: "IT Networking",
       location: "Financial Corp Office, Pulimoodu",
@@ -39,21 +39,21 @@ export default function Gallery() {
       panoramic: true,
     },
     {
-      src: "/images/gallery-5.png",
+      src: "/images/smart-home-automation-wall-controller-panel-dubai.png",
       title: "Smart Home Automation Panel",
       category: "Home Automation",
       location: "Luxury Estate, Dubai UAE",
       techUsed: "Premium wall mounted smart controller, lighting & temperature loop integration",
     },
     {
-      src: "/images/gallery-6.png",
+      src: "/images/heavy-duty-automatic-driveway-swing-gate-muscat.png",
       title: "Driveway Gate Automation",
       category: "Gate Automation",
       location: "Private Mansion, Muscat Oman",
       techUsed: "Heavy duty swing gate motor arm with secure RFID remote trigger",
     },
     {
-      src: "/images/gallery-7.png",
+      src: "/images/enterprise-high-density-fiber-optic-cabling-riyadh.png",
       title: "Enterprise Fiber Optic Loop",
       category: "IT Infrastructure",
       location: "Industrial Center, Riyadh KSA",
