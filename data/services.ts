@@ -20,6 +20,7 @@ export interface ServiceItem {
   icon: ComponentType<{ className?: string }>;
   glowColor: string;
   iconColor: string;
+  image: string;
 }
 
 export const servicesList: ServiceItem[] = [
@@ -30,6 +31,7 @@ export const servicesList: ServiceItem[] = [
     icon: Camera,
     glowColor: "rgba(15, 108, 189, 0.12)",
     iconColor: "text-primary",
+    image: "/images/security-model.png"
   },
   {
     title: "Smart WiFi Cameras",
@@ -37,6 +39,7 @@ export const servicesList: ServiceItem[] = [
     icon: Wifi,
     glowColor: "rgba(22, 163, 74, 0.12)",
     iconColor: "text-success-green",
+    image: "/images/wifi-camera-model.png"
   },
   {
     title: "Structured Cabling",
@@ -44,6 +47,7 @@ export const servicesList: ServiceItem[] = [
     icon: Network,
     glowColor: "rgba(124, 58, 237, 0.12)",
     iconColor: "text-purple-600",
+    image: "/images/cabling-model.png"
   },
   {
     title: "Fiber Networking",
@@ -51,6 +55,7 @@ export const servicesList: ServiceItem[] = [
     icon: Cpu,
     glowColor: "rgba(13, 148, 136, 0.12)",
     iconColor: "text-teal-600",
+    image: "/images/fiber-model.png"
   },
   {
     title: "Access Control Systems",
@@ -58,6 +63,7 @@ export const servicesList: ServiceItem[] = [
     icon: Lock,
     glowColor: "rgba(249, 115, 22, 0.12)",
     iconColor: "text-orange-500",
+    image: "/images/access-control-model.png"
   },
   {
     title: "Biometric Systems",
@@ -65,6 +71,7 @@ export const servicesList: ServiceItem[] = [
     icon: Fingerprint,
     glowColor: "rgba(217, 70, 239, 0.12)",
     iconColor: "text-pink-600",
+    image: "/images/biometric-model.png"
   },
   {
     title: "Video Door Phone",
@@ -72,6 +79,7 @@ export const servicesList: ServiceItem[] = [
     icon: PhoneCall,
     glowColor: "rgba(14, 165, 233, 0.12)",
     iconColor: "text-sky-500",
+    image: "/images/doorphone-model.png"
   },
   // Smart Home Automation
   {
@@ -80,6 +88,7 @@ export const servicesList: ServiceItem[] = [
     icon: LayoutGrid,
     glowColor: "rgba(79, 70, 229, 0.12)",
     iconColor: "text-indigo-600",
+    image: "/images/automation-model.png"
   },
   // Enterprise Software
   {
@@ -88,6 +97,7 @@ export const servicesList: ServiceItem[] = [
     icon: FileCode,
     glowColor: "rgba(236, 72, 153, 0.12)",
     iconColor: "text-pink-500",
+    image: "/images/enterprise-model.png"
   },
   // IT Infrastructure
   {
@@ -96,6 +106,7 @@ export const servicesList: ServiceItem[] = [
     icon: Server,
     glowColor: "rgba(99, 102, 241, 0.12)",
     iconColor: "text-indigo-500",
+    image: "/images/networking-model.png"
   },
   {
     title: "Cyber Security",
@@ -103,6 +114,7 @@ export const servicesList: ServiceItem[] = [
     icon: ShieldCheck,
     glowColor: "rgba(220, 38, 38, 0.12)",
     iconColor: "text-red-600",
+    image: "/images/cybersecurity-model.png"
   },
   {
     title: "Workstation Diagnostics",
@@ -110,5 +122,6 @@ export const servicesList: ServiceItem[] = [
     icon: Laptop,
     glowColor: "rgba(107, 114, 128, 0.12)",
     iconColor: "text-gray-600",
+    image: "/images/workstation-model.png"
   }
 ];

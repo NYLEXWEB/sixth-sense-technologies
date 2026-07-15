@@ -40,6 +40,7 @@ export default function Partners() {
             <button
               key={idx}
               onClick={() => setActiveCategory(cat.category)}
+              suppressHydrationWarning
               className={`px-5 py-2.5 rounded-full text-xs font-bold transition-all ${
                 activeCategory === cat.category
                   ? "bg-text-dark text-white shadow-md scale-[1.02]"

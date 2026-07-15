@@ -141,8 +141,8 @@ export default function Products() {
           </div>
           <div className="lg:w-1/2 relative w-full aspect-video md:aspect-[2/1] lg:aspect-[4/3] rounded-2xl overflow-hidden shadow-lg border border-white">
             <Image
-              src="/images/products.webp"
-              alt="Security systems hardware catalog showcase"
+              src="/images/security-model.png"
+              alt="Our premium security systems hardware catalog showcase"
               fill
               className="object-cover"
               sizes="(max-w-768px) 100vw, 500px"

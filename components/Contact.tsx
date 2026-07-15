@@ -240,6 +240,7 @@ export default function Contact() {
               <button
                 type="submit"
                 disabled={isSubmitting}
+                suppressHydrationWarning
                 className="w-full flex items-center justify-center gap-2 py-4 bg-text-dark hover:bg-primary disabled:bg-text-dark/70 text-white font-extrabold text-xs rounded-2xl transition-all shadow-md"
               >
                 {isSubmitting ? (
