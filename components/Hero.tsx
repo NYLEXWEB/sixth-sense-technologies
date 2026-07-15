@@ -75,7 +75,7 @@ export default function Hero() {
             {/* Headline */}
             <h1 className="text-3xl sm:text-5xl lg:text-[54px] lg:leading-[1.1] font-black text-slate-900 tracking-tight mb-4">
               INTELLIGENT SOLUTIONS<br />
-              <span className="text-primary">Secure</span> Future
+              <span className="text-primary">SECURE</span> FUTURE
             </h1>
 
             {/* Headline Accent Line */}
