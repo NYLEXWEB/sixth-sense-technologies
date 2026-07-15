@@ -1,3 +1,4 @@
+import { ComponentType } from "react";
 import {
   Users,
   Building,
@@ -12,7 +13,7 @@ import {
 export interface SoftwareSolution {
   title: string;
   description: string;
-  icon: any;
+  icon: ComponentType<{ className?: string }>;
   features: string[];
 }
 

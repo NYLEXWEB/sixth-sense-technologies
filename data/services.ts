@@ -1,3 +1,4 @@
+import { ComponentType } from "react";
 import {
   Camera,
   Wifi,
@@ -9,7 +10,6 @@ import {
   Server,
   ShieldCheck,
   Cpu,
-  Cloud,
   FileCode,
   LayoutGrid
 } from "lucide-react";
@@ -17,7 +17,7 @@ import {
 export interface ServiceItem {
   title: string;
   description: string;
-  icon: any;
+  icon: ComponentType<{ className?: string }>;
   glowColor: string;
   iconColor: string;
 }

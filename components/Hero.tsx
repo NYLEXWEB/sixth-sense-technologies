@@ -49,9 +49,9 @@ export default function Hero() {
           className="lg:col-span-7 flex flex-col justify-center"
         >
           {/* Status Badge */}
-          <div className="inline-flex items-center gap-2 bg-text-dark/5 border border-text-dark/10 px-3 py-1 rounded-full text-[10px] font-extrabold uppercase tracking-widest text-text-dark w-fit mb-8 shadow-sm">
+          <div className="inline-flex items-center gap-2 bg-primary/10 border border-primary/20 px-3 py-1.5 rounded-full text-[10px] font-extrabold uppercase tracking-widest text-primary w-fit mb-8 shadow-sm">
             <span className="w-2 h-2 rounded-full bg-success-green animate-pulse" />
-            SENIXGLOBAL • OPERATING IN INDIA AS SIXTH SENSE TECHNOLOGIES
+            SENIXGLOBAL • INDIA OPERATIONS: SIXTH SENSE TECHNOLOGIES
           </div>
 
           <h1 className="text-4xl sm:text-5xl lg:text-7xl font-extrabold text-text-dark tracking-tighter leading-[1.05] mb-6">
@@ -62,7 +62,7 @@ export default function Hero() {
           </h1>
 
           <p className="text-base sm:text-lg text-text-muted max-w-xl mb-10 leading-relaxed font-medium">
-            Providing Security Solutions, Smart Automation, Enterprise Software, IT Infrastructure, CCTV, and Networking across India, Saudi Arabia, Oman, and the United Arab Emirates.
+            Represented in India by <strong className="text-text-dark font-extrabold">Sixth Sense Technologies</strong>. Providing international-standard CCTV integrations, smart automation, enterprise networking, and security solutions.
           </p>
 
           {/* Action Buttons */}

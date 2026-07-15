@@ -45,16 +45,21 @@ export default function Footer() {
           
           {/* Brand Info */}
           <div className="lg:col-span-4 space-y-4">
-            <a href="#home" className="flex items-center gap-2 group w-fit">
+            <a href="#home" className="flex items-center gap-2.5 group w-fit">
               <div className="w-8 h-8 rounded-lg bg-text-dark flex items-center justify-center text-white transition-transform group-hover:scale-105">
                 <Eye className="w-4 h-4 text-white" />
               </div>
               <div>
-                <span className="text-sm font-bold tracking-tight text-text-dark block leading-none uppercase">
-                  SENIXGLOBAL
-                </span>
-                <span className="text-[7px] font-extrabold tracking-widest text-primary block mt-0.5 font-mono uppercase">
-                  GLOBAL TECHNOLOGY
+                <div className="flex items-center gap-2">
+                  <span className="text-sm font-bold tracking-tight text-text-dark block leading-none uppercase">
+                    SENIXGLOBAL
+                  </span>
+                  <span className="text-[8px] font-mono font-extrabold bg-primary/10 border border-primary/25 text-primary px-1.5 py-0.5 rounded-full uppercase leading-none tracking-wide">
+                    Sixth Sense India
+                  </span>
+                </div>
+                <span className="text-[7px] font-extrabold tracking-widest text-text-muted block mt-1 font-mono uppercase">
+                  GLOBAL TECHNOLOGY &amp; SECURITY SYSTEMS
                 </span>
               </div>
             </a>
