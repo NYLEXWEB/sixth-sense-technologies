@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { MapPin, Phone, Mail, Clock, Send } from "lucide-react";
+import { FaWhatsapp } from "react-icons/fa";
 import { motion } from "framer-motion";
 
 export default function Contact() {
@@ -46,7 +47,7 @@ export default function Contact() {
   ];
 
   return (
-    <section id="contact" className="py-32 bg-white relative bg-grid-pattern">
+    <section id="contact" className="py-20 md:py-24 bg-white relative bg-grid-pattern">
       <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
         
         {/* Header */}
@@ -97,12 +98,21 @@ export default function Contact() {
                   <Phone className="w-4.5 h-4.5" />
                 </div>
                 <div>
-                  <h4 className="text-xs font-extrabold text-text-dark uppercase tracking-wider mb-1 font-mono">Direct Communication</h4>
+                  <h4 className="text-xs font-extrabold text-text-dark uppercase tracking-wider mb-1 font-mono">Phone Helpline</h4>
                   <a href="tel:+919747168484" className="text-xs text-text-muted block hover:text-primary transition-colors font-medium">
-                    Phone: +91 97471 68484
+                    +91 97471 68484
                   </a>
+                </div>
+              </div>
+
+              <div className="flex items-start gap-4">
+                <div className="w-10 h-10 rounded-xl bg-white border border-border-light flex items-center justify-center text-[#25D366] shrink-0 shadow-sm hover:border-[#25D366]/35 transition-colors">
+                  <FaWhatsapp className="w-5 h-5" />
+                </div>
+                <div>
+                  <h4 className="text-xs font-extrabold text-text-dark uppercase tracking-wider mb-1 font-mono">WhatsApp Connect</h4>
                   <a href="https://wa.me/919747168484" className="text-xs text-text-muted block hover:text-primary transition-colors font-medium">
-                    WhatsApp: +91 97471 68484
+                    +91 97471 68484
                   </a>
                 </div>
               </div>

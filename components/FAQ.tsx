@@ -13,7 +13,7 @@ export default function FAQ() {
   };
 
   return (
-    <section id="faq" className="py-32 bg-[#f8f9fb] relative overflow-hidden">
+    <section id="faq" className="py-20 md:py-24 bg-[#f8f9fb] relative overflow-hidden hidden md:block">
       <div className="max-w-4xl mx-auto px-6 md:px-12 w-full">
         
         {/* Header */}

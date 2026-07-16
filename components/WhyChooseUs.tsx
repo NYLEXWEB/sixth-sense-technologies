@@ -51,7 +51,7 @@ export default function WhyChooseUs() {
   ];
 
   return (
-    <section id="why-choose-us" className="py-32 bg-[#f8f9fb]">
+    <section id="why-choose-us" className="py-20 md:py-24 bg-[#f8f9fb]">
       <div className="max-w-7xl mx-auto px-6 md:px-12 grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-12 items-start">
         
         {/* Left Sticky Column */}

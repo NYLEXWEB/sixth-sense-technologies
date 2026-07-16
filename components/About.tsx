@@ -15,7 +15,7 @@ export default function About() {
   ];
 
   return (
-    <section id="about" className="py-32 bg-white relative bg-grid-pattern">
+    <section id="about" className="py-20 md:py-24 bg-white relative bg-grid-pattern">
       <div className="max-w-7xl mx-auto px-6 md:px-12 grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-12 items-center">
         
         {/* Left Column: About Narrative */}

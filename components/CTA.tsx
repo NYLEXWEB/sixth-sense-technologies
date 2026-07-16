@@ -1,11 +1,11 @@
 "use client";
 
-import { Phone, MessageSquare, Shield } from "lucide-react";
-
+import { Phone, Shield } from "lucide-react";
+import { FaWhatsapp } from "react-icons/fa";
 
 export default function CTA() {
   return (
-    <section className="py-24 bg-white relative">
+    <section className="py-16 md:py-20 bg-white relative">
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         <div className="relative rounded-3xl overflow-hidden bg-[#111827] border border-white/10 p-8 md:p-16 text-center flex flex-col items-center">
           
@@ -31,7 +31,7 @@ export default function CTA() {
           <div className="flex flex-wrap justify-center gap-4 relative z-10">
             <a
               href="tel:+919747168484"
-              className="flex items-center gap-2 px-6 py-3 rounded-full bg-white hover:bg-secondary-bg text-text-dark text-xs font-bold transition-all shadow-md hover:scale-[1.02]"
+              className="flex items-center gap-2 px-6 py-3 rounded-full bg-white hover:bg-secondary-bg text-text-dark text-xs font-bold transition-all shadow-md hover:scale-[1.02] cursor-pointer"
             >
               <Phone className="w-4 h-4 fill-current" />
               Call: +91 97471 68484
@@ -40,9 +40,9 @@ export default function CTA() {
               href="https://wa.me/919747168484?text=Hi%2C%20I%20would%20like%20to%20get%20a%20free%20quote%20for%20security%20system%20installation."
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 px-6 py-3 rounded-full bg-success-green hover:bg-success-green/90 text-white text-xs font-bold transition-all shadow-md hover:scale-[1.02]"
+              className="flex items-center gap-2 px-6 py-3 rounded-full bg-success-green hover:bg-[#20ba56] text-white text-xs font-bold transition-all shadow-md hover:scale-[1.02] cursor-pointer"
             >
-              <MessageSquare className="w-4 h-4 fill-current" />
+              <FaWhatsapp className="w-4.5 h-4.5" />
               Chat on WhatsApp
             </a>
           </div>

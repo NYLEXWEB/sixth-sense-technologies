@@ -1,11 +1,14 @@
 "use client";
 
 import { useState } from "react";
-import { Menu, X, Phone } from "lucide-react";
+import { Menu, X, Phone, HelpCircle, ChevronDown } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import { faqList } from "@/data/faq";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const [showFaqModal, setShowFaqModal] = useState(false);
+  const [activeModalFaqIdx, setActiveModalFaqIdx] = useState<number | null>(null);
 
   const navItems = [
     { name: "Home", href: "#home" },
@@ -14,6 +17,7 @@ export default function Navbar() {
     { name: "Industries", href: "#industries" },
     { name: "About Us", href: "#about" },
     { name: "Gallery", href: "#gallery" },
+    { name: "FAQ", href: "#faq" },
     { name: "Contact", href: "#contact" },
   ];
 
@@ -72,7 +76,7 @@ export default function Navbar() {
             })}
           </div>
 
-          {/* CTA & Theme Switcher (Desktop) */}
+          {/* CTA (Desktop) */}
           <div className="hidden md:flex items-center gap-4">
             <a
               href="tel:+919747168484"
@@ -107,16 +111,29 @@ export default function Navbar() {
             className="fixed inset-x-4 top-[84px] z-50 bg-white border border-border-light rounded-3xl p-6 shadow-xl md:hidden"
           >
             <div className="flex flex-col gap-4">
-              {navItems.map((item) => (
-                <a
-                  key={item.name}
-                  href={item.href}
-                  onClick={() => setIsOpen(false)}
-                  className="text-sm font-semibold text-text-dark hover:text-primary transition-colors py-2 border-b border-border-light/55 last:border-0"
-                >
-                  {item.name}
-                </a>
-              ))}
+              {navItems.map((item) => {
+                const isFaq = item.name === "FAQ";
+                return (
+                  <button
+                    key={item.name}
+                    onClick={() => {
+                      setIsOpen(false);
+                      if (isFaq) {
+                        setShowFaqModal(true);
+                      } else {
+                        // Scroll to element manually
+                        const el = document.querySelector(item.href);
+                        if (el) {
+                          el.scrollIntoView({ behavior: "smooth" });
+                        }
+                      }
+                    }}
+                    className="text-sm font-semibold text-text-dark hover:text-primary transition-colors py-2 border-b border-border-light/55 last:border-0 text-left w-full cursor-pointer"
+                  >
+                    {item.name}
+                  </button>
+                );
+              })}
               <a
                 href="tel:+919747168484"
                 onClick={() => setIsOpen(false)}
@@ -127,6 +144,64 @@ export default function Navbar() {
               </a>
             </div>
           </motion.div>
+        )}
+      </AnimatePresence>
+
+      {/* Mobile FAQ Overlay Modal */}
+      <AnimatePresence>
+        {showFaqModal && (
+          <div className="fixed inset-0 z-50 flex items-end sm:items-center justify-center p-4 bg-black/60 backdrop-blur-sm">
+            <motion.div
+              initial={{ opacity: 0, y: 100 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: 100 }}
+              transition={{ type: "spring", damping: 25, stiffness: 250 }}
+              className="bg-white border border-slate-200 rounded-[32px] w-full max-w-xl max-h-[80vh] overflow-y-auto p-6 shadow-2xl relative scrollbar-none"
+            >
+              {/* Header */}
+              <div className="flex justify-between items-center pb-4 border-b border-slate-100 mb-6 sticky top-0 bg-white z-10">
+                <div className="flex items-center gap-2 text-primary font-bold">
+                  <HelpCircle className="w-5 h-5 text-primary" />
+                  <span className="text-sm md:text-base font-black text-slate-900">Frequently Asked Questions</span>
+                </div>
+                <button
+                  onClick={() => setShowFaqModal(false)}
+                  className="w-8 h-8 rounded-full bg-slate-50 border border-slate-200/50 flex items-center justify-center text-slate-500 hover:bg-slate-100 cursor-pointer"
+                >
+                  <X className="w-4 h-4" />
+                </button>
+              </div>
+
+              {/* FAQ Accordions List */}
+              <div className="space-y-3.5">
+                {faqList.map((faq, idx) => {
+                  const isLocalOpen = activeModalFaqIdx === idx;
+                  return (
+                    <div
+                      key={idx}
+                      className="bg-slate-50/50 border border-slate-200/40 rounded-2xl overflow-hidden"
+                    >
+                      <button
+                        onClick={() => setActiveModalFaqIdx(isLocalOpen ? null : idx)}
+                        className="w-full flex items-center justify-between p-4 text-left hover:bg-slate-50 transition-colors cursor-pointer"
+                      >
+                        <span className="text-xs font-bold text-slate-800 pr-3">
+                          {faq.question}
+                        </span>
+                        <ChevronDown className={`w-4 h-4 text-slate-400 transition-transform duration-200 shrink-0 ${isLocalOpen ? "rotate-180 text-primary" : ""}`} />
+                      </button>
+
+                      {isLocalOpen && (
+                        <div className="px-4 pb-4 pt-1.5 border-t border-slate-200/20 text-xs text-slate-500 leading-relaxed font-semibold bg-white">
+                          {faq.answer}
+                        </div>
+                      )}
+                    </div>
+                  );
+                })}
+              </div>
+            </motion.div>
+          </div>
         )}
       </AnimatePresence>
     </>

@@ -61,7 +61,7 @@ export default function Testimonials() {
   ];
 
   return (
-    <section id="reviews" className="py-32 bg-white relative overflow-hidden bg-grid-pattern">
+    <section id="reviews" className="py-20 md:py-24 bg-white relative overflow-hidden bg-grid-pattern">
       {/* Decorative ambient blurs */}
       <div className="absolute top-1/2 left-0 w-[500px] h-[500px] bg-primary/5 rounded-full blur-3xl -translate-y-1/2 -z-0 pointer-events-none" />
 

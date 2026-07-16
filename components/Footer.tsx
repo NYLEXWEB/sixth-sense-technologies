@@ -1,6 +1,7 @@
 "use client";
 
-import { Eye, Facebook, Instagram, Phone, MessageSquare } from "lucide-react";
+import { Eye, Facebook, Phone } from "lucide-react";
+import { FaWhatsapp, FaInstagram } from "react-icons/fa";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -35,6 +36,7 @@ export default function Footer() {
     { name: "Partners", href: "#partners" },
     { name: "About Us", href: "#about" },
     { name: "Gallery", href: "#gallery" },
+    { name: "FAQ", href: "#faq" },
     { name: "Contact", href: "#contact" },
   ];
 
@@ -81,19 +83,19 @@ export default function Footer() {
                 href="https://instagram.com/sixthsense_technologies"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-8 h-8 rounded-full bg-white border border-border-light flex items-center justify-center text-text-muted hover:text-primary hover:border-primary transition-all shadow-sm"
+                className="w-8 h-8 rounded-full bg-white border border-border-light flex items-center justify-center text-text-muted hover:text-primary hover:border-primary transition-all shadow-sm cursor-pointer"
                 aria-label="Instagram"
               >
-                <Instagram className="w-3.5 h-3.5" />
+                <FaInstagram className="w-3.5 h-3.5" />
               </a>
               <a
                 href="https://wa.me/919747168484"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-8 h-8 rounded-full bg-white border border-border-light flex items-center justify-center text-text-muted hover:text-primary hover:border-primary transition-all shadow-sm"
+                className="w-8 h-8 rounded-full bg-white border border-border-light flex items-center justify-center text-text-muted hover:text-primary hover:border-primary transition-all shadow-sm cursor-pointer"
                 aria-label="WhatsApp"
               >
-                <MessageSquare className="w-3.5 h-3.5" />
+                <FaWhatsapp className="w-3.5 h-3.5" />
               </a>
               <a
                 href="tel:+919747168484"

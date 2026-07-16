@@ -171,7 +171,7 @@ export default function GoogleReviews() {
   };
 
   return (
-    <section id="google-reviews" className="py-32 bg-white relative overflow-hidden">
+    <section id="google-reviews" className="py-20 md:py-24 bg-white relative overflow-hidden">
       {/* Dynamic SEO JSON-LD Injected */}
       <script
         type="application/ld+json"

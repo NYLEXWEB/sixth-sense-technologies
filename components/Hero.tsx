@@ -1,14 +1,9 @@
 "use client";
 
 import { Phone, Calendar, Shield, Home, Code2, Globe } from "lucide-react";
+import { FaWhatsapp } from "react-icons/fa";
 import { motion } from "framer-motion";
 import Image from "next/image";
-
-const WhatsAppIcon = () => (
-  <svg className="w-4 h-4 text-emerald-500 fill-current shrink-0" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-    <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.73-1.45L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.825 1.451 5.436 0 9.86-4.42 9.864-9.864.002-2.637-1.03-5.114-2.903-6.989C16.262 1.877 13.79 .843 11.179.843c-5.437 0-9.865 4.42-9.869 9.866-.001 1.77.461 3.5 1.338 5.016L1.644 21.68l6.003-1.573z" />
-  </svg>
-);
 
 export default function Hero() {
 
@@ -100,9 +95,9 @@ export default function Hero() {
                 href="https://wa.me/919747168484?text=Hi%2C%20I%20would%20like%20to%20get%20a%20free%20quote%20for%20security%20system%20installation."
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2.5 px-6 py-3 rounded-full bg-white hover:bg-slate-50 text-slate-700 text-xs font-bold border border-slate-200/80 shadow-sm hover:scale-[1.02] transition-all"
+                className="flex items-center gap-2.5 px-6 py-3 rounded-full bg-white hover:bg-slate-50 text-slate-700 text-xs font-bold border border-slate-200/80 shadow-sm hover:scale-[1.02] transition-all cursor-pointer"
               >
-                <WhatsAppIcon />
+                <FaWhatsapp className="w-4.5 h-4.5 text-[#25D366] shrink-0" />
                 WhatsApp
               </a>
               <a

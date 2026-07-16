@@ -7,7 +7,7 @@ import Image from "next/image";
 
 export default function InternationalPresence() {
   return (
-    <section id="countries" className="py-32 bg-[#f8f9fb] relative overflow-hidden">
+    <section id="countries" className="py-20 md:py-24 bg-[#f8f9fb] relative overflow-hidden">
       <div className="absolute inset-0 radial-glow-primary -z-10" />
 
       <div className="max-w-7xl mx-auto px-6 md:px-12">
