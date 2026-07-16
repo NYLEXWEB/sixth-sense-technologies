@@ -24,8 +24,8 @@ export default function SoftwareSolutions() {
             
             <div className="grid grid-cols-3 gap-3">
               <div className="p-3.5 bg-white/[0.02] border border-white/[0.04] rounded-xl text-left">
-                <span className="text-[9px] text-slate-500 font-extrabold uppercase font-mono tracking-wide">Deals Pipeline</span>
-                <div className="text-sm font-black text-white mt-1">$142,500</div>
+                <span className="text-[9px] text-slate-500 font-extrabold uppercase font-mono tracking-wide">Active Deals</span>
+                <div className="text-sm font-black text-white mt-1">142 Logged</div>
               </div>
               <div className="p-3.5 bg-white/[0.02] border border-white/[0.04] rounded-xl text-left">
                 <span className="text-[9px] text-slate-500 font-extrabold uppercase font-mono tracking-wide">Win Rate</span>
@@ -140,19 +140,19 @@ export default function SoftwareSolutions() {
             </div>
 
             <div className="bg-white/[0.01] border border-white/[0.04] rounded-xl p-4">
-              <div className="text-[10px] font-extrabold text-slate-400 font-mono tracking-widest uppercase mb-3">Cart Invoice Simulation</div>
-              <div className="space-y-2 text-[11px] font-semibold text-slate-200">
+              <div className="text-[10px] font-black text-slate-400 uppercase tracking-widest mb-3">Checkout Simulation</div>
+              <div className="space-y-2 text-[11px] font-bold text-slate-200">
                 <div className="flex justify-between border-b border-white/[0.03] pb-1.5">
-                  <span>1x NVR 8-Channel Recorder</span>
-                  <span className="font-mono text-white">$195.00</span>
+                  <span>NVR 8-Channel Recorder</span>
+                  <span className="text-slate-300 font-bold">Qty: 1</span>
                 </div>
                 <div className="flex justify-between border-b border-white/[0.03] pb-1.5">
-                  <span>4x 4MP Dome Network Camera</span>
-                  <span className="font-mono text-white">$240.00</span>
+                  <span>4MP Dome Network Camera</span>
+                  <span className="text-slate-300 font-bold">Qty: 4</span>
                 </div>
                 <div className="flex justify-between text-xs font-black text-emerald-400 pt-1.5">
-                  <span>Total Payable</span>
-                  <span className="font-mono">$435.00</span>
+                  <span>Total Items Staged</span>
+                  <span className="font-mono">5 Units</span>
                 </div>
               </div>
             </div>
@@ -303,7 +303,7 @@ export default function SoftwareSolutions() {
           
           {/* Left: Tab Menu (Columns 4) */}
           <div className="lg:col-span-5 flex flex-col gap-2">
-            <span className="text-[10px] font-extrabold uppercase tracking-widest text-slate-500 mb-2 font-mono block px-2">
+            <span className="text-xs font-black uppercase tracking-wider text-primary mb-3 block px-2">
               Select Solution Suite
             </span>
             <div className="flex flex-row lg:flex-col gap-2 overflow-x-auto lg:overflow-x-visible pb-4 lg:pb-0 scrollbar-none snap-x">
@@ -314,25 +314,29 @@ export default function SoftwareSolutions() {
                   <button
                     key={idx}
                     onClick={() => setCurrentIdx(idx)}
-                    className={`flex items-center gap-3.5 px-4 py-3.5 rounded-2xl text-left transition-all duration-300 shrink-0 snap-start select-none cursor-pointer w-[280px] lg:w-full border ${
+                    className={`flex items-center gap-3.5 px-5 py-4 rounded-2xl text-left transition-all duration-300 shrink-0 snap-start select-none cursor-pointer w-[280px] lg:w-full border group ${
                       isActive
-                        ? "bg-[#0C0F17] border-primary/35 text-white shadow-md shadow-primary/5"
-                        : "bg-transparent border-transparent text-slate-400 hover:bg-white/[0.02] hover:text-slate-200"
+                        ? "bg-[#0C0F17] border-primary/40 text-white shadow-lg shadow-primary/5"
+                        : "bg-transparent border-transparent text-slate-300 hover:bg-white/[0.04] hover:text-white"
                     }`}
                   >
-                    <div className={`w-8 h-8 rounded-xl flex items-center justify-center border transition-all ${
+                    <div className={`w-9 h-9 rounded-xl flex items-center justify-center border transition-all ${
                       isActive
-                        ? "bg-primary/20 border-primary/30 text-primary"
-                        : "bg-white/[0.03] border-white/[0.04] text-slate-400 group-hover:text-white"
+                        ? "bg-primary/20 border-primary/40 text-primary"
+                        : "bg-white/[0.04] border-white/[0.08] text-slate-300 group-hover:text-white"
                     }`}>
-                      <Icon className="w-4.5 h-4.5" />
+                      <Icon className="w-5 h-5" />
                     </div>
                     <div>
-                      <h3 className="text-xs sm:text-sm font-extrabold leading-none mb-1">
+                      <h3 className={`text-sm sm:text-base leading-tight mb-0.5 ${
+                        isActive ? "font-black text-white" : "font-extrabold text-slate-200 group-hover:text-white"
+                      }`}>
                         {item.title}
                       </h3>
-                      <span className="text-[8px] font-bold text-slate-500 uppercase tracking-widest font-mono">
-                        {isActive ? "VIEWING SYSTEM SPEC" : "CLICK TO EXPAND"}
+                      <span className={`text-[10px] font-extrabold uppercase tracking-wider block mt-0.5 ${
+                        isActive ? "text-primary" : "text-slate-500"
+                      }`}>
+                        {isActive ? "Viewing Specifications" : "Click to Expand"}
                       </span>
                     </div>
                   </button>

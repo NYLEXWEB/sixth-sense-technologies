@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef } from "react";
+import { useRef, useEffect } from "react";
 import { servicesList } from "@/data/services";
 import { ArrowRight, ChevronLeft, ChevronRight } from "lucide-react";
 import Image from "next/image";
@@ -18,6 +18,51 @@ export default function Services() {
       });
     }
   };
+
+  useEffect(() => {
+    const container = scrollContainerRef.current;
+    if (!container) return;
+
+    let intervalId: NodeJS.Timeout;
+    let isInteracting = false;
+
+    const startAutoScroll = () => {
+      intervalId = setInterval(() => {
+        if (isInteracting) return;
+        const { scrollLeft, scrollWidth, clientWidth } = container;
+        
+        // Loop back to beginning if we reach the end of the scroll width
+        if (scrollLeft + clientWidth >= scrollWidth - 20) {
+          container.scrollTo({ left: 0, behavior: "smooth" });
+        } else {
+          // Scroll forward by one card width (approx 350px)
+          container.scrollTo({ left: scrollLeft + 350, behavior: "smooth" });
+        }
+      }, 3500);
+    };
+
+    const stopAutoScroll = () => {
+      clearInterval(intervalId);
+    };
+
+    const handleInteractionStart = () => { isInteracting = true; };
+    const handleInteractionEnd = () => { isInteracting = false; };
+
+    container.addEventListener("mouseenter", handleInteractionStart);
+    container.addEventListener("mouseleave", handleInteractionEnd);
+    container.addEventListener("touchstart", handleInteractionStart);
+    container.addEventListener("touchend", handleInteractionEnd);
+
+    startAutoScroll();
+
+    return () => {
+      stopAutoScroll();
+      container.removeEventListener("mouseenter", handleInteractionStart);
+      container.removeEventListener("mouseleave", handleInteractionEnd);
+      container.removeEventListener("touchstart", handleInteractionStart);
+      container.removeEventListener("touchend", handleInteractionEnd);
+    };
+  }, []);
 
   return (
     <section id="services" className="py-20 md:py-24 bg-white relative bg-grid-pattern overflow-hidden">
