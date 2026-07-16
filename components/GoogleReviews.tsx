@@ -249,11 +249,10 @@ export default function GoogleReviews() {
               </div>
             </div>
 
-            {/* Write a Review Button */}
             <button
               onClick={(e) => {
                 createRipple(e);
-                window.open("https://maps.app.goo.gl/WUCKgfXVs9gZDAth9", "_blank", "noopener,noreferrer");
+                window.open("https://www.google.com/maps/place/SIXTH+SENSE+TECHNOLOGIES/@8.4936996,76.9457896,861m/data=!3m1!1e3!4m18!1m9!3m8!1s0x3b05bb1e27c99aa5:0x9c5175a40c08c79!2sSIXTH+SENSE+TECHNOLOGIES!8m2!3d8.4936996!4d76.9483645!9m1!1b1!16s%2Fg%2F11gyft3n1w!3m7!1s0x3b05bb1e27c99aa5:0x9c5175a40c08c79!8m2!3d8.4936996!4d76.9483645!9m1!1b1!16s%2Fg%2F11gyft3n1w?entry=ttu&g_ep=EgoyMDI2MDcxNC4wIKXMDSoASAFQAw%3D%3D", "_blank", "noopener,noreferrer");
               }}
               suppressHydrationWarning
               className="relative overflow-hidden inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full font-extrabold text-white text-xs tracking-wider uppercase bg-gradient-to-r from-[#0F6CBD] via-[#0b5c9f] to-[#0c59a0] shadow-md hover:shadow-lg hover:scale-105 active:scale-95 transition-all duration-300 group focus:outline-none focus:ring-2 focus:ring-[#0F6CBD]/50 cursor-pointer shrink-0"

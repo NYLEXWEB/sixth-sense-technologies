@@ -139,19 +139,19 @@ export default function Testimonials() {
             {/* CTAs */}
             <div className="flex flex-col gap-3 pt-2">
               <a
-                href="https://wa.me/919747168484?text=Hi%2C%20I%20would%20like%20to%20submit%20feedback%20for%20Sixth%20Sense%20Technologies."
+                href="https://www.google.com/maps/place/SIXTH+SENSE+TECHNOLOGIES/@8.4936996,76.9457896,861m/data=!3m1!1e3!4m18!1m9!3m8!1s0x3b05bb1e27c99aa5:0x9c5175a40c08c79!2sSIXTH+SENSE+TECHNOLOGIES!8m2!3d8.4936996!4d76.9483645!9m1!1b1!16s%2Fg%2F11gyft3n1w!3m7!1s0x3b05bb1e27c99aa5:0x9c5175a40c08c79!8m2!3d8.4936996!4d76.9483645!9m1!1b1!16s%2Fg%2F11gyft3n1w?entry=ttu&g_ep=EgoyMDI2MDcxNC4wIKXMDSoASAFQAw%3D%3D"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center justify-center gap-2 px-5 py-3 rounded-2xl bg-white border border-border-light hover:border-primary/30 hover:bg-secondary-bg text-text-dark text-xs font-extrabold transition-all shadow-sm group"
+                className="flex items-center justify-center gap-2 px-5 py-3 rounded-2xl bg-white border border-border-light hover:border-primary/30 hover:bg-secondary-bg text-text-dark text-xs font-extrabold transition-all shadow-sm group cursor-pointer"
               >
                 <Edit3 className="w-3.5 h-3.5 text-text-muted group-hover:text-primary transition-colors" />
                 Write a Review
               </a>
               <a
-                href="https://maps.google.com"
+                href="https://www.google.com/maps/place/SIXTH+SENSE+TECHNOLOGIES/@8.4936996,76.9457896,861m/data=!3m1!1e3!4m18!1m9!3m8!1s0x3b05bb1e27c99aa5:0x9c5175a40c08c79!2sSIXTH+SENSE+TECHNOLOGIES!8m2!3d8.4936996!4d76.9483645!9m1!1b1!16s%2Fg%2F11gyft3n1w!3m7!1s0x3b05bb1e27c99aa5:0x9c5175a40c08c79!8m2!3d8.4936996!4d76.9483645!9m1!1b1!16s%2Fg%2F11gyft3n1w?entry=ttu&g_ep=EgoyMDI2MDcxNC4wIKXMDSoASAFQAw%3D%3D"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center justify-center gap-2 px-5 py-3 rounded-2xl bg-text-dark hover:bg-primary text-white text-xs font-extrabold transition-all shadow-sm"
+                className="flex items-center justify-center gap-2 px-5 py-3 rounded-2xl bg-text-dark hover:bg-primary text-white text-xs font-extrabold transition-all shadow-sm cursor-pointer"
               >
                 View on Google Maps
                 <ExternalLink className="w-3.5 h-3.5 opacity-60" />
