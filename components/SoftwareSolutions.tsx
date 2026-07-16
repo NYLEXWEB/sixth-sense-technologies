@@ -328,14 +328,20 @@ export default function SoftwareSolutions() {
                       <Icon className="w-5 h-5" />
                     </div>
                     <div>
-                      <h3 className={`text-sm sm:text-base leading-tight mb-0.5 ${
-                        isActive ? "font-black text-white" : "font-extrabold text-slate-200 group-hover:text-white"
-                      }`}>
+                      <div
+                        className={`text-sm sm:text-base leading-tight mb-0.5 ${
+                          isActive ? "font-black text-white" : "font-black text-slate-200 group-hover:text-white"
+                        }`}
+                        style={{ fontFamily: "var(--font-inter)" }}
+                      >
                         {item.title}
-                      </h3>
-                      <span className={`text-[10px] font-extrabold uppercase tracking-wider block mt-0.5 ${
-                        isActive ? "text-primary" : "text-slate-500"
-                      }`}>
+                      </div>
+                      <span
+                        className={`text-[10px] font-extrabold uppercase tracking-wider block mt-0.5 ${
+                          isActive ? "text-primary" : "text-slate-400"
+                        }`}
+                        style={{ fontFamily: "var(--font-inter)" }}
+                      >
                         {isActive ? "Viewing Specifications" : "Click to Expand"}
                       </span>
                     </div>
