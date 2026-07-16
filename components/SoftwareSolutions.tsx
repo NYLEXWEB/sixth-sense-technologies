@@ -303,7 +303,10 @@ export default function SoftwareSolutions() {
           
           {/* Left: Tab Menu (Columns 4) */}
           <div className="lg:col-span-5 flex flex-col gap-2">
-            <span className="text-xs font-black uppercase tracking-wider text-primary mb-3 block px-2">
+            <span
+              className="text-xs font-black uppercase tracking-wider text-primary mb-3 block px-2"
+              style={{ fontFamily: "var(--font-inter)" }}
+            >
               Select Solution Suite
             </span>
             <div className="flex flex-row lg:flex-col gap-2 overflow-x-auto lg:overflow-x-visible pb-4 lg:pb-0 scrollbar-none snap-x">
