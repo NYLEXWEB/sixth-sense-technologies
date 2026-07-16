@@ -7,7 +7,6 @@ import { motion, AnimatePresence } from "framer-motion";
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-  const [theme, setTheme] = useState<"light" | "dark">("light");
 
   useEffect(() => {
     const handleScroll = () => {
@@ -18,35 +17,8 @@ export default function Navbar() {
       }
     };
     window.addEventListener("scroll", handleScroll);
-
-    // Initial theme detection
-    const savedTheme = localStorage.getItem("theme") as "light" | "dark";
-    if (savedTheme) {
-      Promise.resolve().then(() => setTheme(savedTheme));
-      if (savedTheme === "dark") {
-        document.documentElement.classList.add("dark");
-      } else {
-        document.documentElement.classList.remove("dark");
-      }
-    } else {
-      // Default to light theme
-      Promise.resolve().then(() => setTheme("light"));
-      document.documentElement.classList.remove("dark");
-    }
-
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
-
-  const toggleTheme = () => {
-    const nextTheme = theme === "light" ? "dark" : "light";
-    setTheme(nextTheme);
-    localStorage.setItem("theme", nextTheme);
-    if (nextTheme === "dark") {
-      document.documentElement.classList.add("dark");
-    } else {
-      document.documentElement.classList.remove("dark");
-    }
-  };
 
   const navItems = [
     { name: "Home", href: "#home" },
@@ -62,11 +34,7 @@ export default function Navbar() {
     <>
       <div className="absolute top-6 left-0 right-0 z-50 flex justify-center px-4">
         <nav
-          className={`w-full max-w-7xl rounded-full px-6 py-4 flex items-center justify-between transition-all duration-300 ${
-            isScrolled
-              ? "glass-nav shadow-lg"
-              : "bg-transparent border border-transparent"
-          }`}
+          className="w-full max-w-7xl rounded-full px-6 py-4 flex items-center justify-between transition-all duration-300 bg-transparent border border-transparent shadow-none"
         >
           {/* Logo Brand */}
           <a href="#home" className="flex items-center gap-2 group">
@@ -119,14 +87,6 @@ export default function Navbar() {
 
           {/* CTA & Theme Switcher (Desktop) */}
           <div className="hidden md:flex items-center gap-4">
-            <button
-              onClick={toggleTheme}
-              className="p-2 rounded-full text-text-muted hover:text-text-dark hover:bg-secondary-bg/50 transition-all cursor-pointer"
-              aria-label="Toggle Theme"
-              suppressHydrationWarning
-            >
-              {theme === "light" ? <Moon className="w-4.5 h-4.5" /> : <Sun className="w-4.5 h-4.5 text-yellow-400" />}
-            </button>
             <a
               href="tel:+919747168484"
               className="flex items-center gap-1.5 px-5 py-2.5 rounded-full bg-primary hover:bg-primary-hover text-white text-[11px] font-bold transition-all shadow-sm hover:shadow hover:scale-[1.02]"
@@ -138,14 +98,6 @@ export default function Navbar() {
 
           {/* Mobile Theme Toggle & Menu Toggle Wrapper */}
           <div className="flex items-center gap-2.5 md:hidden">
-            <button
-              onClick={toggleTheme}
-              className="p-1.5 rounded-full text-text-dark hover:bg-secondary-bg/50 transition-colors cursor-pointer"
-              aria-label="Toggle Theme"
-              suppressHydrationWarning
-            >
-              {theme === "light" ? <Moon className="w-5 h-5" /> : <Sun className="w-5 h-5 text-yellow-400" />}
-            </button>
             <button
               onClick={() => setIsOpen(!isOpen)}
               className="p-1.5 rounded-full text-text-dark hover:bg-secondary-bg transition-colors"

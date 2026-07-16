@@ -1,17 +1,17 @@
 import type { Metadata } from "next";
-import { Space_Grotesk, Plus_Jakarta_Sans, Geist_Mono } from "next/font/google";
+import { Inter, Cormorant_Garamond, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
-const spaceGrotesk = Space_Grotesk({
-  variable: "--font-space-grotesk",
+const inter = Inter({
+  variable: "--font-inter",
   subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700"],
 });
 
-const plusJakartaSans = Plus_Jakarta_Sans({
-  variable: "--font-plus-jakarta",
+const cormorant = Cormorant_Garamond({
+  variable: "--font-cormorant",
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700", "800"],
+  weight: ["300", "400", "500", "600", "700"],
+  style: ["normal", "italic"],
 });
 
 const geistMono = Geist_Mono({
@@ -20,18 +20,49 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Senixglobal | Global Tech, Security Systems & Smart Infrastructure",
-  description: "International technology solutions provider. Operating in India as Sixth Sense Technologies. Offering professional CCTV integrations, smart gate automation, biometric access systems, custom ERP/CRM software, and enterprise network setups across India, Saudi Arabia, Oman, and UAE.",
+  metadataBase: new URL("https://sensixglobal.com"),
+  title: "Best CCTV Dealer in Thiruvananthapuram | CCTV Installation & Security Systems Kerala",
+  description: "Sixth Sense Technologies (Senixglobal) is the best CCTV dealer in Thiruvananthapuram, Kerala. Professional security camera installation, biometric attendance systems, access control, fire alarms, and structured cabling for homes, offices, and industries.",
   keywords: [
+    "CCTV Installation Thiruvananthapuram",
+    "Best CCTV Dealer Thiruvananthapuram",
+    "Security System Supplier Kerala",
+    "Security Camera Installation Kerala",
+    "Biometric Attendance System Kerala",
+    "Access Control System Kerala",
+    "Video Door Phone Kerala",
+    "Smart Lock Installation Kerala",
+    "Home Security Kerala",
+    "Office CCTV Kerala",
+    "Warehouse CCTV Kerala",
+    "Industrial CCTV Kerala",
+    "Fire Alarm System Kerala",
+    "Intruder Alarm Kerala",
+    "Networking Solutions Kerala",
+    "Structured Cabling Kerala",
+    "Annual Maintenance CCTV Kerala",
+    "AI CCTV Installation Kerala",
+    "Commercial CCTV Kerala",
+    "Residential CCTV Kerala",
     "Senixglobal",
     "Sixth Sense Technologies Thiruvananthapuram",
-    "CCTV Installation Trivandrum",
-    "Security System Supplier Kerala",
     "Gate Automation Oman Saudi Arabia",
-    "Enterprise Software Solutions GCC",
-    "Biometric Access Control Trivandrum",
-    "Structured Networking Support Kerala"
+    "Enterprise Software Solutions GCC"
   ],
+  alternates: {
+    canonical: "https://sensixglobal.com",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
   authors: [{ name: "Senixglobal" }],
   creator: "Senixglobal",
   publisher: "Senixglobal",
@@ -41,26 +72,26 @@ export const metadata: Metadata = {
     telephone: true,
   },
   openGraph: {
-    title: "Senixglobal | Global Tech & Security Integrations",
-    description: "Operating in India as Sixth Sense Technologies. Custom CCTV installations, smart gate automation, biometric systems, and enterprise software solutions.",
-    url: "https://sixthsensetech.in",
-    siteName: "Senixglobal",
+    title: "Best CCTV Dealer in Thiruvananthapuram | Security Systems Kerala",
+    description: "Sixth Sense Technologies provides professional CCTV installation, smart gate automation, biometric attendance systems, and structured cabling in Kerala.",
+    url: "https://sensixglobal.com",
+    siteName: "Sixth Sense Technologies",
     locale: "en_US",
     type: "website",
     images: [
       {
-        url: "/images/hero.webp",
+        url: "/images/cctv-camera-dealer-kerala-hero-showcase.webp",
         width: 1200,
         height: 630,
-        alt: "Senixglobal smart technology and security systems",
+        alt: "Sixth Sense Technologies CCTV installation and security solutions in Thiruvananthapuram",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Senixglobal | Global Tech & Security Systems",
-    description: "International installations of security solutions, smart automation, enterprise software, and IT infrastructures.",
-    images: ["/images/hero.webp"],
+    title: "Best CCTV Dealer in Thiruvananthapuram | Security Systems Kerala",
+    description: "Certified security camera installation, biometric access controls, intruder fire alarms, and network cabling across Kerala.",
+    images: ["/images/cctv-camera-dealer-kerala-hero-showcase.webp"],
   },
 };
 
@@ -72,7 +103,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${spaceGrotesk.variable} ${plusJakartaSans.variable} ${geistMono.variable} h-full antialiased`}
+      className={`${inter.variable} ${cormorant.variable} ${geistMono.variable} h-full antialiased`}
     >
       <head>
         <script

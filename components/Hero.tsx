@@ -45,7 +45,7 @@ export default function Hero() {
       {/* Background Image Container with cover and custom right positions */}
       <div className="absolute inset-0 z-0 w-full h-full select-none pointer-events-none">
         <Image
-          src="/images/hero-bg.jpg"
+          src="/images/cctv-camera-installation-trivandrum-hero-background.jpg"
           alt="Security Solutions Background"
           fill
           priority
@@ -56,10 +56,10 @@ export default function Hero() {
 
       {/* Hero content wrapper */}
       <div className="max-w-7xl mx-auto px-6 md:px-12 w-full flex-grow flex flex-col justify-between relative z-10">
-        
+
         {/* Main Grid for content and camera overlay */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center w-full mt-4 lg:mt-8">
-          
+
           {/* Left Text Content */}
           <motion.div
             initial={{ opacity: 0, y: 25 }}
@@ -74,9 +74,9 @@ export default function Hero() {
             </div>
 
             {/* Headline */}
-            <h1 className="text-4xl sm:text-5xl lg:text-[54px] lg:leading-[1.1] font-black text-slate-900 tracking-tight mb-4">
-              Intelligent Solutions.<br />
-              <span className="text-primary">Secure</span> Future.
+            <h1 className="text-3xl sm:text-5xl lg:text-[54px] lg:leading-[1.1] font-black text-slate-900 tracking-tight mb-4">
+              INTELLIGENT SOLUTIONS<br />
+              <span className="text-primary">SECURE</span> FUTURE
             </h1>
 
             {/* Headline Accent Line */}
@@ -84,7 +84,7 @@ export default function Hero() {
 
             {/* Subheadline description */}
             <p className="text-sm sm:text-base text-slate-500 font-semibold max-w-xl mb-8 leading-relaxed">
-              Represented in India by <strong className="text-slate-800 font-extrabold">Sixth Sense Technologies</strong>. Delivering advanced security, smart automation, enterprise software, and IT infrastructure solutions across India, Saudi Arabia, Oman, and the UAE.
+              Delivering advanced security, smart automation, enterprise software, and IT infrastructure solutions across India, Saudi Arabia, Oman, and the UAE.
             </p>
 
             {/* Action Buttons Row */}
@@ -130,7 +130,7 @@ export default function Hero() {
 
         {/* Bottom content section: Bento Grid Panel & Stats */}
         <div className="w-full flex flex-col gap-6 mt-12">
-          
+
           {/* Floating Bento Panel */}
           <motion.div
             initial={{ opacity: 0, y: 15 }}

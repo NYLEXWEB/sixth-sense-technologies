@@ -23,7 +23,7 @@ export default function Certification() {
   ];
 
   return (
-    <section className="py-32 bg-[#111827] text-white relative overflow-hidden">
+    <section id="certification" className="py-32 bg-[#111827] text-white relative overflow-hidden">
       {/* Background ambient blurs */}
       <div className="absolute top-1/2 left-0 w-[450px] h-[450px] bg-primary/10 rounded-full blur-3xl -translate-y-1/2 -z-0 pointer-events-none" />
 
