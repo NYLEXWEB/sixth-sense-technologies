@@ -84,7 +84,7 @@ export default function Hero() {
 
             {/* Subheadline description */}
             <p className="text-sm sm:text-base text-slate-500 font-semibold max-w-xl mb-8 leading-relaxed">
-              Delivering advanced security, smart automation, enterprise software, and IT infrastructure solutions across India, Saudi Arabia, Oman, and the UAE.
+              Represented in India by <strong className="text-slate-800 font-extrabold">Sixth Sense Technologies</strong>. Delivering advanced security, smart automation, enterprise software, and IT infrastructure solutions across India, Saudi Arabia, Oman, and the UAE.
             </p>
 
             {/* Action Buttons Row */}

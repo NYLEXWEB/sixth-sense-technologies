@@ -73,7 +73,7 @@ export async function GET() {
     const result = data.result;
 
     // Build the updated cache data
-    const apiReviews: Review[] = (result.reviews || []).map((r: any) => ({
+    const apiReviews: Review[] = (result.reviews || []).map((r: { author_name: string; profile_photo_url?: string; rating?: number; text?: string; relative_time_description?: string; time?: number; }) => ({
       author_name: r.author_name,
       profile_photo_url: r.profile_photo_url || "",
       rating: r.rating || 5,
@@ -106,12 +106,13 @@ export async function GET() {
     }
 
     return NextResponse.json({ ...newCache, source: "live_api" });
-  } catch (error: any) {
-    console.error("Google Business API fetch failed, falling back to cache. Error:", error.message || error);
+  } catch (error) {
+    const errorMsg = error instanceof Error ? error.message : String(error);
+    console.error("Google Business API fetch failed, falling back to cache. Error:", errorMsg);
 
     const cachedData = getCachedData();
     if (cachedData) {
-      return NextResponse.json({ ...cachedData, source: "cache_fallback", error: error.message || error });
+      return NextResponse.json({ ...cachedData, source: "cache_fallback", error: errorMsg });
     }
 
     return NextResponse.json(

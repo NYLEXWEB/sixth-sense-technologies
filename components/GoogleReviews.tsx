@@ -51,8 +51,8 @@ export default function GoogleReviews() {
         }
         const jsonData = await res.json();
         setData(jsonData);
-      } catch (err: any) {
-        setError(err.message || "An error occurred while fetching reviews.");
+      } catch (err) {
+        setError(err instanceof Error ? err.message : "An error occurred while fetching reviews.");
       } finally {
         setLoading(false);
       }
