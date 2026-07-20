@@ -34,5 +34,12 @@ export const countriesData: Country[] = [
     code: "AE",
     status: "International Branch",
     description: "Delivering advanced cloud solutions, biometric access gateways, and video intercom installations for premier estates."
+  },
+  {
+    name: "Qatar",
+    flag: "🇶🇦",
+    code: "QA",
+    status: "International Presence",
+    description: "Configuring state-of-the-art building management panels, digital door lock integrations, and enterprise IT support."
   }
 ];

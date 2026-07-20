@@ -19,6 +19,12 @@ export default function Contact() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
+
+    const clientName = formState.name;
+    const clientPhone = formState.phone;
+    const clientEmail = formState.email;
+    const clientService = formState.service;
+    const clientMessage = formState.message;
     
     try {
       const response = await fetch("/api/contact", {
@@ -41,12 +47,24 @@ export default function Contact() {
         setTimeout(() => setSubmitSuccess(false), 5000);
       } else {
         const data = await response.json();
-        alert(data.error || "Failed to submit request. Please try again.");
+        console.error("Form logging failed:", data.error);
       }
     } catch (error) {
-      console.error("Error submitting contact form:", error);
-      alert("Error sending message. Please check your network connection and try again.");
+      console.error("Error submitting contact form to DB:", error);
     } finally {
+      // Compose pre-filled email
+      const emailTo = "sixthwords@gmail.com";
+      const emailSubject = `Site Survey Request - ${clientService}`;
+      const emailBody = `Name: ${clientName}
+Phone: ${clientPhone}
+Email: ${clientEmail}
+Service Division: ${clientService}
+
+Project Description:
+${clientMessage}`;
+
+      // Open mail client
+      window.location.href = `mailto:${emailTo}?subject=${encodeURIComponent(emailSubject)}&body=${encodeURIComponent(emailBody)}`;
       setIsSubmitting(false);
     }
   };
@@ -104,7 +122,7 @@ export default function Contact() {
                 <div>
                   <h4 className="text-xs font-extrabold text-text-dark uppercase tracking-wider mb-1 font-mono">International Branches</h4>
                   <p className="text-xs text-text-muted leading-relaxed font-medium">
-                    Riyadh (Saudi Arabia) • Muscat (Oman) • Dubai (United Arab Emirates)
+                    Riyadh (Saudi Arabia) • Muscat (Oman) • Dubai (United Arab Emirates) • Qatar
                   </p>
                 </div>
               </div>
@@ -116,7 +134,10 @@ export default function Contact() {
                 <div>
                   <h4 className="text-xs font-extrabold text-text-dark uppercase tracking-wider mb-1 font-mono">Phone Helpline</h4>
                   <a href="tel:+919747168484" className="text-xs text-text-muted block hover:text-primary transition-colors font-medium">
-                    +91 97471 68484
+                    +91 97471 68484 (India)
+                  </a>
+                  <a href="tel:+966574603514" className="text-xs text-text-muted block hover:text-primary transition-colors font-medium mt-1">
+                    +966 57 460 3514 (Saudi Arabia)
                   </a>
                 </div>
               </div>
@@ -130,6 +151,7 @@ export default function Contact() {
                   <a href="https://wa.me/919747168484" className="text-xs text-text-muted block hover:text-primary transition-colors font-medium">
                     +91 97471 68484
                   </a>
+              
                 </div>
               </div>
 

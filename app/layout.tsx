@@ -1,27 +1,23 @@
-import type { Metadata } from "next";
-import { Inter, Cormorant_Garamond, Geist_Mono } from "next/font/google";
+import type { Metadata, Viewport } from "next";
+import Script from "next/script";
 import "./globals.css";
 
-const inter = Inter({
-  variable: "--font-inter",
-  subsets: ["latin"],
-});
-
-const cormorant = Cormorant_Garamond({
-  variable: "--font-cormorant",
-  subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700"],
-  style: ["normal", "italic"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+export const viewport: Viewport = {
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "#ffffff" },
+    { media: "(prefers-color-scheme: dark)", color: "#0b0f19" },
+  ],
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 5,
+};
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://sensixglobal.com"),
-  title: "Best CCTV Dealer in Thiruvananthapuram | CCTV Installation & Security Systems Kerala",
+  title: {
+    default: "Best CCTV Dealer in Thiruvananthapuram | CCTV Installation & Security Systems Kerala",
+    template: "%s | Sixth Sense Technologies",
+  },
   description: "Sixth Sense Technologies (Senixglobal) is the best CCTV dealer in Thiruvananthapuram, Kerala. Professional security camera installation, biometric attendance systems, access control, fire alarms, and structured cabling for homes, offices, and industries.",
   keywords: [
     "CCTV Installation Thiruvananthapuram",
@@ -51,6 +47,19 @@ export const metadata: Metadata = {
   ],
   alternates: {
     canonical: "https://sensixglobal.com",
+  },
+  icons: {
+    icon: [
+      { url: "/favicon.ico" },
+      { url: "/favicon.ico", sizes: "16x16", type: "image/x-icon" },
+      { url: "/favicon.ico", sizes: "32x32", type: "image/x-icon" },
+    ],
+    apple: [
+      { url: "/favicon.ico", sizes: "180x180", type: "image/x-icon" },
+    ],
+  },
+  verification: {
+    google: "google-site-verification-placeholder",
   },
   robots: {
     index: true,
@@ -109,10 +118,18 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${inter.variable} ${cormorant.variable} ${geistMono.variable} h-full antialiased`}
+      className="h-full antialiased"
     >
       <head>
-        <script
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Geist+Mono:wght@100..900&family=Inter:wght@100..900&display=swap"
+          rel="stylesheet"
+        />
+        <Script
+          id="theme-initializer"
+          strategy="beforeInteractive"
           dangerouslySetInnerHTML={{
             __html: `
               (function() {

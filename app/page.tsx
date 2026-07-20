@@ -100,7 +100,187 @@ export default function Home() {
         "aggregateRating": {
           "@type": "AggregateRating",
           "ratingValue": "5.0",
-          "reviewCount": "97"
+          "reviewCount": "97",
+          "bestRating": "5",
+          "worstRating": "1"
+        },
+        "review": [
+          {
+            "@type": "Review",
+            "author": {
+              "@type": "Person",
+              "name": "Sreejith Chandrasekhar"
+            },
+            "datePublished": "2025-06-15",
+            "reviewBody": "I googled for a CCTV technician, when I am completely fed up with my current CCTV providers and their service. Once Jameel from Sixth Sense came for solving our issues, I am very glad to say, I am free of headache. I assure it to everyone, they are professional, attending our issues immediately and giving solutions or completing the task promptly.",
+            "reviewRating": {
+              "@type": "Rating",
+              "ratingValue": "5",
+              "bestRating": "5"
+            }
+          },
+          {
+            "@type": "Review",
+            "author": {
+              "@type": "Person",
+              "name": "Ànita Philip Alexander"
+            },
+            "datePublished": "2025-05-10",
+            "reviewBody": "They have best and quick response on time. Work is neatly done by them. Any time help and resolving issues on time. Takes work anywhere in kerala. I had my cctv installation done at Pathanamthitta by trivandrum showroom . Great work thankyou",
+            "reviewRating": {
+              "@type": "Rating",
+              "ratingValue": "5",
+              "bestRating": "5"
+            }
+          },
+          {
+            "@type": "Review",
+            "author": {
+              "@type": "Person",
+              "name": "Anand SR"
+            },
+            "datePublished": "2023-07-14",
+            "reviewBody": "Am writing this review almost after an year of installation. I have called for minor service in two occasions and response was amazing and issue is resolved within 24 hours. At the time of installation also they were verry professional and has good knowledge of CCTV system, helped me to choose most value for money configuration for my home.",
+            "reviewRating": {
+              "@type": "Rating",
+              "ratingValue": "5",
+              "bestRating": "5"
+            }
+          },
+          {
+            "@type": "Review",
+            "author": {
+              "@type": "Person",
+              "name": "Jayaganesh Duraipandian"
+            },
+            "datePublished": "2024-07-14",
+            "reviewBody": "Excellent Job done by sixth sense Technologies. Jameel Mohammad & his team are very professional and finished my 2 houses on time with advanced hik-Vision cameras. Now I am able to see the cameras live from overseas with clarity & without any interruption.",
+            "reviewRating": {
+              "@type": "Rating",
+              "ratingValue": "5",
+              "bestRating": "5"
+            }
+          },
+          {
+            "@type": "Review",
+            "author": {
+              "@type": "Person",
+              "name": "Anooj Muraleedharan"
+            },
+            "datePublished": "2023-07-14",
+            "reviewBody": "Writing this review after over an year of installation. Until this day from the very beginning, their service and support has been amazing and really lives up to the 5 star rating they are maintaining. Post installation, they have promptly responded to all whatsapp queries.",
+            "reviewRating": {
+              "@type": "Rating",
+              "ratingValue": "5",
+              "bestRating": "5"
+            }
+          }
+        ],
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Security and IT Services",
+          "itemListElement": [
+            {
+              "@type": "OfferCatalog",
+              "name": "Security & Automation Systems",
+              "itemListElement": [
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "CCTV Integration & Installation",
+                    "description": "High-definition analog and IP surveillance setups. Fully customized cabling layouts, hardware alignment, and local/remote view configurations."
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Smart WiFi Security Cameras",
+                    "description": "App-managed indoor/outdoor wireless cameras. Features secure motion alarms, continuous night vision, and redundant cloud storage syncing."
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Access Control & Lock Systems",
+                    "description": "Physical barrier locks, RFID card entry terminals, magnetic door latching systems, and partition triggers configured for high security."
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Biometric Attendance Systems",
+                    "description": "Personnel log portals utilizing high-accuracy facial scans or fingerprint records. Integrates directly with secure time and payroll databases."
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Video Door Phone Intercoms",
+                    "description": "Integrated intercom displays for villas and office partitions. Provides real-time smartphone rings, video history, and electronic release."
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Driveway Gate Automation",
+                    "description": "Heavy-duty automatic sliding and swing gates. Sensor-driven safety, remote fob triggers, and integration with intercom systems."
+                  }
+                }
+              ]
+            },
+            {
+              "@type": "OfferCatalog",
+              "name": "IT Infrastructure & Software Systems",
+              "itemListElement": [
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Structured Cabling & Networking",
+                    "description": "Heavy-duty shielded CAT6 / CAT7 cable routing, organized patch panels, and dust-resistant enclosure builds for zero packet loss."
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Fiber Splicing & Optical Networking",
+                    "description": "High-throughput optical fiber laying, splicing, OTDR testing, and media converter setups for high-speed long-distance communication."
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Custom ERP, CRM, & POS Systems",
+                    "description": "Custom ERP, CRM, inventory management, and POS integrations to automate client and asset operations dynamically."
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Server Solutions & Active Directory Setup",
+                    "description": "Configuration of local server towers, Active Directory setups, RAID arrays, and network-attached storage (NAS) for document backups."
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Network Cyber Security & Firewalls",
+                    "description": "Dedicated hardware firewall configurations, secure subnet routing, anti-virus protocols, and automated network vulnerability audits."
+                  }
+                }
+              ]
+            }
+          ]
         }
       },
       {
@@ -183,6 +363,114 @@ export default function Home() {
             "item": "https://sensixglobal.com"
           }
         ]
+      },
+      {
+        "@type": "Product",
+        "@id": "https://sensixglobal.com/#product-dome",
+        "name": "Hikvision IP Dome Camera",
+        "description": "4MP Ultra HD Dome Camera with 30m Infrared Night Vision, IK10 Vandal-Proof resistance, and PoE support. Ideal for indoor/outdoor corporate and residential security setups.",
+        "image": "https://sensixglobal.com/images/best-cctv-dealer-thiruvananthapuram-security-catalog.png",
+        "brand": {
+          "@type": "Brand",
+          "name": "Hikvision"
+        },
+        "offers": {
+          "@type": "AggregateOffer",
+          "priceCurrency": "INR",
+          "lowPrice": "2000",
+          "highPrice": "15000",
+          "offerCount": "10"
+        }
+      },
+      {
+        "@type": "Product",
+        "@id": "https://sensixglobal.com/#product-pt",
+        "name": "Hikvision Smart Pan-Tilt (PT)",
+        "description": "Smart Pan-Tilt camera featuring 360° Pan / 90° Tilt rotation, AI Human & Vehicle Tracking, two-way talkback audio, and WiFi/Ethernet access ports.",
+        "image": "https://sensixglobal.com/images/smart-wifi-outdoor-security-camera-installation.png",
+        "brand": {
+          "@type": "Brand",
+          "name": "Hikvision"
+        },
+        "offers": {
+          "@type": "AggregateOffer",
+          "priceCurrency": "INR",
+          "lowPrice": "3500",
+          "highPrice": "18000",
+          "offerCount": "10"
+        }
+      },
+      {
+        "@type": "Product",
+        "@id": "https://sensixglobal.com/#product-nvr",
+        "name": "Enterprise Network Video Recorder (NVR)",
+        "description": "High performance network recorder supporting 8 / 16 / 32 IP inputs, up to 8K recording resolution, dual-OS protection, and H.265+ compression.",
+        "image": "https://sensixglobal.com/images/enterprise-servers-cabling-network-infrastructure-rack.png",
+        "brand": {
+          "@type": "Brand",
+          "name": "Hikvision"
+        },
+        "offers": {
+          "@type": "AggregateOffer",
+          "priceCurrency": "INR",
+          "lowPrice": "8000",
+          "highPrice": "45000",
+          "offerCount": "10"
+        }
+      },
+      {
+        "@type": "Product",
+        "@id": "https://sensixglobal.com/#product-dvr",
+        "name": "Digital Video Recorder (DVR)",
+        "description": "Digital video recorder supporting 4 / 8 / 16 Analog Inputs, 5MP HD Live Feed, HDTVI / AHD / CVI signals, and Smart Event Search.",
+        "image": "https://sensixglobal.com/images/best-cctv-dealer-thiruvananthapuram-security-catalog.png",
+        "brand": {
+          "@type": "Brand",
+          "name": "Hikvision"
+        },
+        "offers": {
+          "@type": "AggregateOffer",
+          "priceCurrency": "INR",
+          "lowPrice": "4500",
+          "highPrice": "25000",
+          "offerCount": "10"
+        }
+      },
+      {
+        "@type": "Product",
+        "@id": "https://sensixglobal.com/#product-access",
+        "name": "Biometric Access Controller",
+        "description": "Advanced physical access gate with storage for 10,000+ fingerprints. Supports Verification via Card, Finger, or PIN with TCP/IP & RS485 protocols.",
+        "image": "https://sensixglobal.com/images/biometric-rfid-access-control-security-terminals.png",
+        "brand": {
+          "@type": "Brand",
+          "name": "Hikvision"
+        },
+        "offers": {
+          "@type": "AggregateOffer",
+          "priceCurrency": "INR",
+          "lowPrice": "6000",
+          "highPrice": "35000",
+          "offerCount": "10"
+        }
+      },
+      {
+        "@type": "Product",
+        "@id": "https://sensixglobal.com/#product-intercom",
+        "name": "HD Video Door Phone System",
+        "description": "Smart villa intercom system featuring a 7-inch touch monitor, 1080p wide view lens angle, WiFi phone app smart links, and electronic relay locks.",
+        "image": "https://sensixglobal.com/images/smart-video-door-phone-intercom-displays.png",
+        "brand": {
+          "@type": "Brand",
+          "name": "Hikvision"
+        },
+        "offers": {
+          "@type": "AggregateOffer",
+          "priceCurrency": "INR",
+          "lowPrice": "7500",
+          "highPrice": "28000",
+          "offerCount": "10"
+        }
       }
     ]
   };
@@ -192,7 +480,7 @@ export default function Home() {
       {/* Schema Injection */}
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaGraph) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaGraph).replace(/</g, "\\u003c") }}
       />
 
       {/* Main Page Layout */}

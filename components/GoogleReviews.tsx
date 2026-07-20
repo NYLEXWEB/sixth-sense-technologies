@@ -175,7 +175,7 @@ export default function GoogleReviews() {
       {/* Dynamic SEO JSON-LD Injected */}
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(seoSchema) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(seoSchema).replace(/</g, "\\u003c") }}
       />
 
       {/* Styled ripples and scrollbar hide */}

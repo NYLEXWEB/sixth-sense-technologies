@@ -20,6 +20,7 @@ export default function Footer() {
     { name: "Saudi Arabia", href: "#countries" },
     { name: "Oman", href: "#countries" },
     { name: "United Arab Emirates", href: "#countries" },
+    { name: "Qatar", href: "#countries" },
   ];
 
   const partners = [
