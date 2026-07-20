@@ -93,6 +93,12 @@ export const metadata: Metadata = {
     description: "Certified security camera installation, biometric access controls, intruder fire alarms, and network cabling across Kerala.",
     images: ["/images/cctv-camera-dealer-kerala-hero-showcase.webp"],
   },
+  other: {
+    "geo.region": "IN-KL",
+    "geo.placename": "Thiruvananthapuram",
+    "geo.position": "8.493188;76.943960",
+    "ICBM": "8.493188, 76.943960",
+  },
 };
 
 export default function RootLayout({

@@ -16,23 +16,39 @@ export default function Contact() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitSuccess, setSubmitSuccess] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    // Simulate API call
-    setTimeout(() => {
-      setIsSubmitting(false);
-      setSubmitSuccess(true);
-      setFormState({
-        name: "",
-        email: "",
-        phone: "",
-        service: "CCTV Integration",
-        message: "",
+    
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formState),
       });
-      // reset success message after 5 seconds
-      setTimeout(() => setSubmitSuccess(false), 5000);
-    }, 1500);
+
+      if (response.ok) {
+        setSubmitSuccess(true);
+        setFormState({
+          name: "",
+          email: "",
+          phone: "",
+          service: "CCTV Integration",
+          message: "",
+        });
+        setTimeout(() => setSubmitSuccess(false), 5000);
+      } else {
+        const data = await response.json();
+        alert(data.error || "Failed to submit request. Please try again.");
+      }
+    } catch (error) {
+      console.error("Error submitting contact form:", error);
+      alert("Error sending message. Please check your network connection and try again.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const servicesOptions = [
@@ -123,8 +139,8 @@ export default function Contact() {
                 </div>
                 <div>
                   <h4 className="text-xs font-extrabold text-text-dark uppercase tracking-wider mb-1 font-mono">Inquiry Inbox</h4>
-                  <a href="mailto:info@sixthsensetech.in" className="text-xs text-text-muted block hover:text-primary transition-colors font-medium">
-                    info@sixthsensetech.in
+                  <a href="mailto:sixthwords@gmail.com" className="text-xs text-text-muted block hover:text-primary transition-colors font-medium">
+                    sixthwords@gmail.com
                   </a>
                 </div>
               </div>

@@ -23,7 +23,7 @@ export default function Navbar() {
 
   return (
     <>
-      <div className="absolute top-6 left-0 right-0 z-50 flex justify-center px-4">
+      <header className="absolute top-6 left-0 right-0 z-50 flex justify-center px-4">
         <nav
           className="w-full max-w-7xl rounded-full px-6 py-4 flex items-center justify-between transition-all duration-300 bg-transparent border border-transparent shadow-none"
         >
@@ -98,7 +98,7 @@ export default function Navbar() {
             </button>
           </div>
         </nav>
-      </div>
+      </header>
 
       {/* Mobile Nav Drawer */}
       <AnimatePresence>

@@ -58,7 +58,7 @@ export default function Products() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch mb-20">
           
           {/* Bento Card 1: Prominent Partner Badge (Takes full row-span on large screens) */}
-          <div className="lg:row-span-2 bg-[#0C0F17] text-white rounded-[32px] p-8 shadow-xl flex flex-col justify-between min-h-[480px] relative overflow-hidden border border-white/[0.04]">
+          <div className="lg:row-span-2 bg-[#0C0F17] bg-text-dark text-white rounded-[32px] p-8 shadow-xl flex flex-col justify-between min-h-[480px] relative overflow-hidden border border-white/[0.04]">
             <div className="absolute top-0 right-0 w-[300px] h-[300px] bg-primary/15 rounded-full blur-3xl -z-0 pointer-events-none" />
             
             <div className="relative z-10">
